@@ -6,3 +6,9 @@
 - Bianka Vasconcelos - xxxxxxx
 
 ## Descrição do trabalho
+
+## Instalando Dependências
+
+```bash
+pip install -r requirements.txt
+```
