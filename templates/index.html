@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Busca de Documentos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+      }
+
+      .search-section {
+        padding: 30px;
+        background: #f8f9fa;
+      }
+
+      .search-form {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .search-input {
+        flex: 1;
+        min-width: 300px;
+        padding: 15px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      .search-select {
+        padding: 15px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 16px;
+        background: white;
+        min-width: 150px;
+      }
+
+      .search-button {
+        padding: 15px 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .search-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .search-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .stats-section {
+        padding: 20px 30px;
+        background: #e9ecef;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .stat-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .stat-number {
+        font-size: 2em;
+        font-weight: bold;
+        color: #667eea;
+      }
+
+      .stat-label {
+        color: #6c757d;
+        margin-top: 5px;
+      }
+
+      .results-section {
+        padding: 30px;
+      }
+
+      .results-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .results-count {
+        font-size: 1.2em;
+        color: #6c757d;
+      }
+
+      .loading {
+        text-align: center;
+        padding: 40px;
+        color: #6c757d;
+      }
+
+      .error {
+        background: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .result-card {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+      }
+
+      .result-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .result-title {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #667eea;
+        margin-bottom: 10px;
+      }
+
+      .result-title a {
+        color: #667eea;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .result-title a:hover {
+        color: #5a6fd8;
+        text-decoration: underline;
+      }
+
+      .result-score {
+        background: #28a745;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.9em;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .result-body {
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .result-meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        font-size: 0.9em;
+        color: #6c757d;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .meta-label {
+        font-weight: bold;
+      }
+
+      .precedent-badge {
+        background: #dc3545;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 10px;
+        font-size: 0.8em;
+      }
+
+      @media (max-width: 768px) {
+        .search-form {
+          flex-direction: column;
+        }
+
+        .search-input {
+          min-width: auto;
+        }
+
+        .header h1 {
+          font-size: 2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🔍 Sistema de Busca</h1>
+        <p>Busque em documentos jurídicos indexados no Elasticsearch</p>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-grid" id="stats">
+          <div class="stat-card">
+            <div class="stat-number">-</div>
+            <div class="stat-label">Total de Documentos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">-</div>
+            <div class="stat-label">Tamanho do Índice</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">-</div>
+            <div class="stat-label">Lista Invertida</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-section">
+        <form class="search-form" id="searchForm">
+          <input
+            type="text"
+            class="search-input"
+            id="queryInput"
+            placeholder="Digite sua busca..."
+            required
+          />
+          <select class="search-select" id="fieldSelect">
+            <option value="all">Todos os campos</option>
+            <option value="title">Título</option>
+            <option value="body">Corpo do texto</option>
+            <option value="highlight">Destaque</option>
+            <option value="court">Tribunal</option>
+            <option value="degree">Grau</option>
+          </select>
+          <button type="submit" class="search-button" id="searchButton">
+            Buscar
+          </button>
+        </form>
+      </div>
+
+      <div class="results-section">
+        <div class="results-header">
+          <div class="results-count" id="resultsCount"></div>
+        </div>
+        <div id="results"></div>
+      </div>
+    </div>
+
+    <script>
+      // Carregar estatísticas ao carregar a página
+      document.addEventListener('DOMContentLoaded', function () {
+        loadStats();
+      });
+
+      // Função para carregar estatísticas
+      async function loadStats() {
+        try {
+          const response = await fetch('/stats');
+          const data = await response.json();
+
+          if (data.indices && data.indices.documents) {
+            const stats = data.indices.documents.total;
+            const docsCount = stats.docs.count;
+            const storeSize = formatBytes(stats.store.size_in_bytes);
+            const indexSize = formatBytes(stats.indexing.index_size_in_bytes);
+
+            document.querySelectorAll('.stat-number')[0].textContent =
+              docsCount;
+            document.querySelectorAll('.stat-number')[1].textContent =
+              storeSize;
+            document.querySelectorAll('.stat-number')[2].textContent =
+              indexSize;
+          }
+        } catch (error) {
+          console.error('Erro ao carregar estatísticas:', error);
+        }
+      }
+
+      // Função para formatar bytes
+      function formatBytes(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+      }
+
+      // Função para executar busca
+      async function performSearch(query, field, size = 10) {
+        const searchButton = document.getElementById('searchButton');
+        const resultsDiv = document.getElementById('results');
+
+        searchButton.disabled = true;
+        searchButton.textContent = 'Buscando...';
+
+        resultsDiv.innerHTML =
+          '<div class="loading">Buscando documentos...</div>';
+
+        try {
+          const response = await fetch('/search', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              query: query,
+              field: field,
+              size: size,
+            }),
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            displayResults(data);
+          } else {
+            displayError(data.error || 'Erro na busca');
+          }
+        } catch (error) {
+          displayError('Erro de conexão: ' + error.message);
+        } finally {
+          searchButton.disabled = false;
+          searchButton.textContent = 'Buscar';
+        }
+      }
+
+      // Função para exibir resultados
+      function displayResults(data) {
+        const resultsDiv = document.getElementById('results');
+        const resultsCount = document.getElementById('resultsCount');
+
+        resultsCount.textContent = `${data.total} resultado(s) encontrado(s)`;
+
+        if (data.results.length === 0) {
+          resultsDiv.innerHTML =
+            '<div class="loading">Nenhum resultado encontrado</div>';
+          return;
+        }
+
+        const resultsHTML = data.results
+          .map(
+            (result) => `
+            <div class="result-card">
+                <div class="result-title">
+                    <a href="/document/${
+                      result.id
+                    }" style="color: #667eea; text-decoration: none; cursor: pointer;">
+                        ${escapeHtml(result.title)}
+                    </a>
+                </div>
+                <div class="result-score">Score: ${result.score.toFixed(
+                  3
+                )}</div>
+                <div class="result-body">${escapeHtml(result.body)}</div>
+                <div class="result-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">ID:</span>
+                        <span>${result.id}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tribunal:</span>
+                        <span>${result.court || 'N/A'}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Grau:</span>
+                        <span>${result.degree || 'N/A'}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Data:</span>
+                        <span>${result.date || 'N/A'}</span>
+                    </div>
+                    ${
+                      result.is_mandatory_precedent
+                        ? '<div class="meta-item"><span class="precedent-badge">Precedente Obrigatório</span></div>'
+                        : ''
+                    }
+                </div>
+            </div>
+        `
+          )
+          .join('');
+
+        resultsDiv.innerHTML = resultsHTML;
+      }
+
+      // Função para exibir erro
+      function displayError(message) {
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = `<div class="error">${escapeHtml(
+          message
+        )}</div>`;
+        document.getElementById('resultsCount').textContent = '';
+      }
+
+      // Função para escapar HTML
+      function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+
+      // Event listener para o formulário de busca
+      document
+        .getElementById('searchForm')
+        .addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const query = document.getElementById('queryInput').value.trim();
+          const field = document.getElementById('fieldSelect').value;
+
+          if (query) {
+            performSearch(query, field);
+          }
+        });
+    </script>
+  </body>
+</html>

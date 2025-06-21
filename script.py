@@ -15,10 +15,12 @@ df = pd.read_parquet(f"{folder}/colecao/baseDocumentos")
 
 # print("\nEstatísticas descritivas:")
 # print(df.describe()) 
-
+count = 0
 for index, row in df.iterrows():
-    court = (row['metadata']['court'])
-    print(court)
+    count += 1
+    # contar quantidade de documentos no parquet 
+
+print(count)
 
     # if (not court):
     #         print('esse documento nao tem court', index)
