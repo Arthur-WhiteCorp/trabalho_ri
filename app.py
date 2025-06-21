@@ -50,17 +50,64 @@ def search():
         
         # Construir query baseada no campo selecionado
         if search_field == 'all':
+            # Removido o título da busca multi_match
             query = {
-                "multi_match": {
-                    "query": query_text,
-                    "fields": ["title", "body", "highlight"],
-                    "type": "best_fields"
+                "bool": {
+                    "must": [
+                        {
+                            "multi_match": {
+                                "query": query_text,
+                                "fields": ["body", "highlight"],
+                                "type": "best_fields"
+                            }
+                        }
+                    ],
+                    "should": [
+                        {
+                            "script_score": {
+                                "query": {"match_all": {}},
+                                "script": {
+                                    "source": """
+                                    def degree = doc['degree'].value;
+                                    if (degree == 'DEGREE_TERCEIRO') return 3.0;
+                                    else if (degree == 'DEGREE_SEGUNDO') return 2.0;
+                                    else if (degree == 'DEGREE_PRIMEIRO') return 1.0;
+                                    else return 0.5;
+                                    """,
+                                    "lang": "painless"
+                                }
+                            }
+                        }
+                    ]
                 }
             }
         else:
             query = {
-                "match": {
-                    search_field: query_text
+                "bool": {
+                    "must": [
+                        {
+                            "match": {
+                                search_field: query_text
+                            }
+                        }
+                    ],
+                    "should": [
+                        {
+                            "script_score": {
+                                "query": {"match_all": {}},
+                                "script": {
+                                    "source": """
+                                    def degree = doc['degree'].value;
+                                    if (degree == 'DEGREE_TERCEIRO') return 3.0;
+                                    else if (degree == 'DEGREE_SEGUNDO') return 2.0;
+                                    else if (degree == 'DEGREE_PRIMEIRO') return 1.0;
+                                    else return 0.5;
+                                    """,
+                                    "lang": "painless"
+                                }
+                            }
+                        }
+                    ]
                 }
             }
         

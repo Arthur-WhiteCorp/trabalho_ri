@@ -3,7 +3,7 @@ import os
 
 folder = os.getcwd()
 # Lê o arquivo parquet
-df = pd.read_parquet(f"{folder}/colecao/baseDocumentos")
+df = pd.read_parquet(f"{folder}/../colecao/baseDocumentos")
 
 # # Exibe as primeiras linhas do DataFrame
 # print("\nPrimeiras linhas do arquivo:")
@@ -17,7 +17,9 @@ df = pd.read_parquet(f"{folder}/colecao/baseDocumentos")
 # print(df.describe()) 
 count = 0
 for index, row in df.iterrows():
-    count += 1
+    metadata = row['metadata']
+    print(metadata['degree'])
+    break
     # contar quantidade de documentos no parquet 
 
 print(count)
