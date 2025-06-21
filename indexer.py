@@ -89,6 +89,9 @@ class Indexer:
                 metadata = row.get('metadata', {})
                 document = row.get('document', {})
                 
+                # Obter o ID do parquet
+                doc_id = row.get('id', idx)  # Usa o ID do parquet, ou idx como fallback
+                
                 # Se document estiver vazio, pular o documento
                 if not document:
                     skipped += 1
@@ -128,7 +131,7 @@ class Indexer:
                 
                 yield {
                     "_index":  self.index_name,
-                    "_id":     idx,    
+                    "_id":     str(doc_id),  # Converte para string para garantir compatibilidade
                     "_source": source
                 }
                 

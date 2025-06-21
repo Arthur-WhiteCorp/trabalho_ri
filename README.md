@@ -10,6 +10,7 @@ Sistema de busca em documentos jurídicos usando Elasticsearch e Flask.
 - ✅ Busca por campos específicos
 - ✅ Estatísticas do índice
 - ✅ Score de relevância
+- ✅ IDs únicos dos documentos preservados
 
 ## Pré-requisitos
 
@@ -53,6 +54,21 @@ python app.py
 http://localhost:5000
 ```
 
+## IDs dos Documentos
+
+O sistema preserva os **IDs originais** dos documentos do parquet:
+
+- **Antes:** IDs sequenciais (1, 2, 3, ..., 4268)
+- **Agora:** IDs originais do parquet (716144885, 2661736329, etc.)
+
+### Reindexar com IDs corretos:
+
+Se você já indexou com IDs sequenciais e quer usar os IDs originais:
+
+```bash
+python reindex_with_correct_ids.py
+```
+
 ## Como usar
 
 ### Interface Web
@@ -61,6 +77,7 @@ http://localhost:5000
 2. **Digite** sua busca no campo de texto
 3. **Selecione** o campo para buscar (ou "Todos os campos")
 4. **Clique** em "Buscar"
+5. **Clique no título** para ver detalhes completos
 
 ### Campos de Busca
 
@@ -75,7 +92,7 @@ http://localhost:5000
 
 Cada resultado mostra:
 
-- **Título** do documento
+- **Título** do documento (clicável)
 - **Score** de relevância (BM25)
 - **Preview** do conteúdo
 - **Metadados**: ID, Tribunal, Grau, Data
@@ -84,15 +101,17 @@ Cada resultado mostra:
 ## Estrutura do Projeto
 
 ```
-├── app.py                 # Aplicação Flask
-├── main.py               # Script de indexação
-├── indexer.py            # Classe para indexação
+├── app.py                      # Aplicação Flask
+├── main.py                     # Script de indexação
+├── reindex_with_correct_ids.py # Reindexação com IDs corretos
+├── indexer.py                  # Classe para indexação
 ├── helpers/
-│   └── validateField.py  # Validação de campos
+│   └── validateField.py        # Validação de campos
 ├── templates/
-│   └── index.html        # Interface web
-├── requirements.txt      # Dependências
-└── README.md            # Este arquivo
+│   ├── index.html              # Interface de busca
+│   └── document.html           # Página de detalhes
+├── requirements.txt            # Dependências
+└── README.md                   # Este arquivo
 ```
 
 ## Tecnologias
@@ -107,6 +126,8 @@ Cada resultado mostra:
 - `GET /` - Interface principal
 - `POST /search` - Executar busca
 - `GET /stats` - Estatísticas do índice
+- `GET /document/<id>` - Página de detalhes
+- `GET /api/document/<id>` - API de detalhes
 
 ## Exemplo de Busca
 
@@ -140,3 +161,4 @@ Para dúvidas ou problemas, verifique:
 1. Se o Elasticsearch está rodando
 2. Se os documentos foram indexados corretamente
 3. Se todas as dependências estão instaladas
+4. Se os IDs dos documentos estão corretos
