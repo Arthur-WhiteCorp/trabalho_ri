@@ -1,0 +1,8 @@
+{
+  "map_with_expansion": 0.6549896628692372,
+  "map_without_expansion": 0.7089779476749585,
+  "improvement_percentage": -7.614945568162157,
+  "total_queries_processed": 253,
+  "timestamp": "2025-06-28 14:43:25",
+  "note": "Comparison between with and without local+global expansion"
+}

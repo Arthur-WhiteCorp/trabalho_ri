@@ -22,7 +22,7 @@ class MAPCalculatorFull:
         
         print(f"✅ Carregadas {self.queries_data['metadata']['total_queries']} consultas")
         
-    def search_query(self, query, size=100):
+    def search_query(self, query, size=100, use_expansion=True):
         """Executa busca para uma query específica"""
         try:
             response = requests.post(
@@ -30,7 +30,8 @@ class MAPCalculatorFull:
                 json={
                     "query": query,
                     "field": "all",
-                    "size": size
+                    "size": size,
+                    "use_expansion": use_expansion
                 },
                 headers={"Content-Type": "application/json"},
                 timeout=30
@@ -103,7 +104,7 @@ class MAPCalculatorFull:
         
         return relevant_retrieved / k
     
-    def calculate_map(self, progress_interval=10):
+    def calculate_map(self, use_expansion=True, progress_interval=10):
         """Calcula o MAP geral com todas as consultas"""
         if not self.queries_data:
             print("❌ Dados de consultas não carregados")
@@ -111,7 +112,8 @@ class MAPCalculatorFull:
         
         queries = self.queries_data['queries']
         
-        print(f"🔍 Executando buscas para calcular MAP...")
+        expansion_text = "COM expansão local" if use_expansion else "SEM expansão"
+        print(f"🔍 Executando buscas para calcular MAP ({expansion_text})...")
         print(f"📊 Processando TODAS as {len(queries)} consultas")
         print(f"⏱️  Estimativa: ~{len(queries) * 0.2:.0f} segundos")
         
@@ -133,7 +135,7 @@ class MAPCalculatorFull:
                 print(f"📊 Progresso: {i}/{total_queries} ({i/total_queries*100:.1f}%) - ETA: {eta:.0f}s")
             
             # Executar busca
-            search_results = self.search_query(query_text)
+            search_results = self.search_query(query_text, use_expansion=use_expansion)
             
             if search_results:
                 # Calcular Average Precision
@@ -171,7 +173,9 @@ class MAPCalculatorFull:
         mean_precision_at_10 = precision_at_10_sum / successful_queries
         total_time = time.time() - start_time
         
-        print(f"\n📈 RESULTADOS FINAIS:")
+        expansion_suffix = "_with_local_expansion" if use_expansion else "_without_expansion"
+        
+        print(f"\n📈 RESULTADOS FINAIS ({expansion_text}):")
         print(f"   Queries processadas: {successful_queries}/{total_queries}")
         print(f"   Tempo total: {total_time:.1f} segundos")
         print(f"   MAP: {map_score:.4f}")
@@ -185,47 +189,55 @@ class MAPCalculatorFull:
                 "total_queries": total_queries,
                 "successful_queries": successful_queries,
                 "total_time_seconds": total_time,
+                "use_expansion": use_expansion,
+                "expansion_type": "local_only",
                 "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
             },
             "results_by_query": results_by_query
         }
         
-        with open("analysers/results/map_full_results.json", "w", encoding="utf-8") as f:
+        filename = f"analysers/results/map_full_results{expansion_suffix}.json"
+        with open(filename, "w", encoding="utf-8") as f:
             json.dump(detailed_results, f, indent=2, ensure_ascii=False)
         
-        print(f"💾 Resultados salvos em map_full_results.json")
+        print(f"💾 Resultados salvos em {filename}")
         
         return map_score
 
 def main():
-    print("🧮 CALCULADOR DE MAP COMPLETO")
-    print("=" * 50)
+    print("🚀 Iniciando cálculo de MAP...")
     
-    # Inicializar calculador
-    calculator = MAPCalculatorFull()
+    # Criar instância do analisador
+    analyser = MAPCalculatorFull()
     
-    # Carregar consultas do JSON
-    calculator.load_queries_json()
+    # Carregar dados das consultas
+    if not analyser.load_queries_json():
+        print("❌ Falha ao carregar dados das consultas")
+        exit(1)
     
-    # Calcular MAP com todas as consultas
-    print(f"\n🎯 Calculando MAP com TODAS as consultas...")
-    map_score = calculator.calculate_map(progress_interval=25)
+    print("\n" + "="*60)
+    print("📊 CALCULANDO MAP SEM EXPANSÃO")
+    print("="*60)
     
-    print(f"\n🎯 MAP FINAL: {map_score:.4f}")
+    # Calcular MAP sem expansão
+    map_without_expansion = analyser.calculate_map(use_expansion=False)
     
-    # Salvar resultados resumidos
-    results = {
-        "map_score": map_score,
-        "total_queries_processed": calculator.queries_data['metadata']['total_queries'],
-        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "fix_applied": "String conversion for ID comparison",
-        "note": "Full evaluation with all queries"
-    }
+    print("\n" + "="*60)
+    print("📊 CALCULANDO MAP COM EXPANSÃO LOCAL")
+    print("="*60)
     
-    with open("analysers/results/map_results_complete.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
+    # Calcular MAP com expansão local
+    map_with_expansion = analyser.calculate_map(use_expansion=True)
     
-    print(f"\n💾 Resultados salvos em map_results_complete.json")
+    print("\n" + "="*60)
+    print("📈 COMPARAÇÃO FINAL")
+    print("="*60)
+    print(f"MAP sem expansão:     {map_without_expansion:.4f}")
+    print(f"MAP com expansão:     {map_with_expansion:.4f}")
+    print(f"Diferença:            {map_with_expansion - map_without_expansion:+.4f}")
+    print(f"Melhoria relativa:    {((map_with_expansion - map_without_expansion) / map_without_expansion * 100):+.2f}%" if map_without_expansion > 0 else "N/A")
+    
+    print("\n✅ Análise concluída!")
 
 if __name__ == "__main__":
     main() 

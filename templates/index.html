@@ -12,7 +12,7 @@
       }
 
       body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh;
         padding: 20px;
@@ -249,6 +249,26 @@
         .header h1 {
           font-size: 2em;
         }
+
+        #pagination {
+          margin-top: 20px;
+        }
+
+        #pagination > div:first-child {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        #pagination button {
+          width: 100%;
+          max-width: 200px;
+        }
+
+        #pageInfo {
+          min-width: auto;
+          width: 100%;
+          max-width: 200px;
+        }
       }
     </style>
   </head>
@@ -293,10 +313,72 @@
             <option value="court">Tribunal</option>
             <option value="degree">Grau</option>
           </select>
+          <select class="search-select" id="sizeSelect">
+            <option value="10">10 resultados</option>
+            <option value="20">20 resultados</option>
+            <option value="50">50 resultados</option>
+            <option value="100">100 resultados</option>
+          </select>
           <button type="submit" class="search-button" id="searchButton">
             Buscar
           </button>
         </form>
+
+        <!-- Opções avançadas -->
+        <div
+          class="advanced-options"
+          style="
+            margin-top: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              flex-wrap: wrap;
+            "
+          >
+            <label
+              style="
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+              "
+            >
+              <input
+                type="checkbox"
+                id="useLocalExpansion"
+                checked
+                style="width: 16px; height: 16px"
+              />
+              <span>Usar expansão local (feedback implícito)</span>
+            </label>
+            <span
+              id="expansionStats"
+              style="font-size: 12px; color: #6c757d"
+            ></span>
+          </div>
+          <div
+            id="expansionInfo"
+            style="
+              margin-top: 10px;
+              padding: 10px;
+              background: #f8f9fa;
+              border-radius: 5px;
+              display: none;
+              font-size: 14px;
+            "
+          >
+            <strong>Expansão local aplicada:</strong>
+            <span id="expansionText"></span>
+          </div>
+        </div>
       </div>
 
       <div class="results-section">
@@ -304,19 +386,107 @@
           <div class="results-count" id="resultsCount"></div>
         </div>
         <div id="results"></div>
+
+        <!-- Controles de paginação -->
+        <div
+          id="pagination"
+          style="display: none; margin-top: 30px; text-align: center"
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 15px;
+              flex-wrap: wrap;
+              margin-bottom: 15px;
+            "
+          >
+            <button
+              id="prevPage"
+              style="
+                padding: 12px 20px;
+                background: #667eea;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+              "
+              onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(102, 126, 234, 0.4)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(102, 126, 234, 0.3)'"
+            >
+              ← Anterior
+            </button>
+            <div
+              id="pageInfo"
+              style="
+                font-size: 16px;
+                color: #495057;
+                font-weight: 500;
+                padding: 12px 20px;
+                background: #f8f9fa;
+                border-radius: 8px;
+                min-width: 120px;
+                text-align: center;
+              "
+            ></div>
+            <button
+              id="nextPage"
+              style="
+                padding: 12px 20px;
+                background: #667eea;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+              "
+              onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(102, 126, 234, 0.4)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(102, 126, 234, 0.3)'"
+            >
+              Próximo →
+            </button>
+          </div>
+          <div
+            id="showingInfo"
+            style="
+              font-size: 14px;
+              color: #6c757d;
+              background: #e9ecef;
+              padding: 8px 16px;
+              border-radius: 20px;
+              display: inline-block;
+            "
+          ></div>
+        </div>
       </div>
     </div>
 
     <script>
+      // Variáveis globais para paginação
+      let currentPage = 1;
+      let totalPages = 1;
+      let currentQuery = "";
+      let currentField = "all";
+      let currentSize = 10;
+      let totalResults = 0;
+
       // Carregar estatísticas ao carregar a página
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         loadStats();
       });
 
       // Função para carregar estatísticas
       async function loadStats() {
         try {
-          const response = await fetch('/stats');
+          const response = await fetch("/stats");
           const data = await response.json();
 
           if (data.indices && data.indices.documents) {
@@ -325,70 +495,193 @@
             const storeSize = formatBytes(stats.store.size_in_bytes);
             const indexSize = formatBytes(stats.indexing.index_size_in_bytes);
 
-            document.querySelectorAll('.stat-number')[0].textContent =
+            document.querySelectorAll(".stat-number")[0].textContent =
               docsCount;
-            document.querySelectorAll('.stat-number')[1].textContent =
+            document.querySelectorAll(".stat-number")[1].textContent =
               storeSize;
-            document.querySelectorAll('.stat-number')[2].textContent =
+            document.querySelectorAll(".stat-number")[2].textContent =
               indexSize;
           }
         } catch (error) {
-          console.error('Erro ao carregar estatísticas:', error);
+          console.error("Erro ao carregar estatísticas:", error);
         }
       }
 
       // Função para formatar bytes
       function formatBytes(bytes) {
-        if (bytes === 0) return '0 Bytes';
+        if (bytes === 0) return "0 Bytes";
         const k = 1024;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const sizes = ["Bytes", "KB", "MB", "GB"];
         const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
       }
 
       // Função para executar busca
-      async function performSearch(query, field, size = 10) {
-        const searchButton = document.getElementById('searchButton');
-        const resultsDiv = document.getElementById('results');
+      async function performSearch(query, field, size = 10, page = 1) {
+        const searchButton = document.getElementById("searchButton");
+        const resultsDiv = document.getElementById("results");
 
         searchButton.disabled = true;
-        searchButton.textContent = 'Buscando...';
+        searchButton.textContent = "Buscando...";
 
         resultsDiv.innerHTML =
           '<div class="loading">Buscando documentos...</div>';
 
         try {
-          const response = await fetch('/search', {
-            method: 'POST',
+          // Obter configuração de expansão local
+          const useLocalExpansion =
+            document.getElementById("useLocalExpansion").checked;
+
+          const response = await fetch("/search", {
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
             body: JSON.stringify({
               query: query,
               field: field,
               size: size,
+              page: page,
+              use_local_expansion: useLocalExpansion,
             }),
           });
 
           const data = await response.json();
 
           if (response.ok) {
+            // Atualizar variáveis globais
+            currentPage = data.pagination.current_page;
+            totalPages = data.pagination.total_pages;
+            currentQuery = query;
+            currentField = field;
+            currentSize = size;
+            totalResults = data.total;
+
             displayResults(data);
+            updatePagination();
+
+            // Exibir informações sobre expansão local
+            displayExpansionInfo(data);
           } else {
-            displayError(data.error || 'Erro na busca');
+            displayError(data.error || "Erro na busca");
           }
         } catch (error) {
-          displayError('Erro de conexão: ' + error.message);
+          displayError("Erro de conexão: " + error.message);
         } finally {
           searchButton.disabled = false;
-          searchButton.textContent = 'Buscar';
+          searchButton.textContent = "Buscar";
+        }
+      }
+
+      // Função para exibir informações sobre expansão local
+      function displayExpansionInfo(data) {
+        const expansionInfo = document.getElementById("expansionInfo");
+        const expansionText = document.getElementById("expansionText");
+        const expansionStats = document.getElementById("expansionStats");
+
+        if (data.expansion_info && data.expansion_info.expansion_applied) {
+          const localTerms = data.expansion_info.local_expansion_terms || [];
+
+          if (localTerms && localTerms.length > 0) {
+            expansionText.textContent = `Termos extraídos dos documentos do topo: "${localTerms.join(
+              '", "'
+            )}"`;
+            expansionStats.textContent = `${localTerms.length} termos adicionados`;
+            expansionInfo.style.display = "block";
+          } else {
+            expansionInfo.style.display = "none";
+            expansionStats.textContent = "";
+          }
+        } else {
+          expansionInfo.style.display = "none";
+          expansionStats.textContent = "Expansão não aplicada";
+        }
+      }
+
+      // Função para navegar para página anterior
+      function goToPreviousPage() {
+        if (currentPage > 1) {
+          performSearch(
+            currentQuery,
+            currentField,
+            currentSize,
+            currentPage - 1
+          );
+        }
+      }
+
+      // Função para navegar para próxima página
+      function goToNextPage() {
+        if (currentPage < totalPages) {
+          performSearch(
+            currentQuery,
+            currentField,
+            currentSize,
+            currentPage + 1
+          );
+        }
+      }
+
+      // Função para ir para uma página específica
+      function goToPage(page) {
+        if (page >= 1 && page <= totalPages) {
+          performSearch(currentQuery, currentField, currentSize, page);
+        }
+      }
+
+      // Função para atualizar controles de paginação
+      function updatePagination() {
+        const paginationDiv = document.getElementById("pagination");
+        const prevButton = document.getElementById("prevPage");
+        const nextButton = document.getElementById("nextPage");
+        const pageInfo = document.getElementById("pageInfo");
+        const showingInfo = document.getElementById("showingInfo");
+
+        if (totalPages <= 1) {
+          paginationDiv.style.display = "none";
+          return;
+        }
+
+        paginationDiv.style.display = "block";
+
+        // Atualizar estado dos botões
+        prevButton.disabled = currentPage <= 1;
+        nextButton.disabled = currentPage >= totalPages;
+
+        // Atualizar informações da página
+        pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
+
+        // Calcular informações de exibição
+        const from = (currentPage - 1) * currentSize + 1;
+        const to = Math.min(currentPage * currentSize, totalResults);
+        showingInfo.textContent = `Mostrando ${from} a ${to} de ${totalResults} resultados`;
+
+        // Atualizar estilos dos botões
+        if (currentPage <= 1) {
+          prevButton.style.background = "#6c757d";
+          prevButton.style.cursor = "not-allowed";
+          prevButton.style.boxShadow = "0 2px 8px rgba(108, 117, 125, 0.3)";
+        } else {
+          prevButton.style.background = "#667eea";
+          prevButton.style.cursor = "pointer";
+          prevButton.style.boxShadow = "0 2px 8px rgba(102, 126, 234, 0.3)";
+        }
+
+        if (currentPage >= totalPages) {
+          nextButton.style.background = "#6c757d";
+          nextButton.style.cursor = "not-allowed";
+          nextButton.style.boxShadow = "0 2px 8px rgba(108, 117, 125, 0.3)";
+        } else {
+          nextButton.style.background = "#667eea";
+          nextButton.style.cursor = "pointer";
+          nextButton.style.boxShadow = "0 2px 8px rgba(102, 126, 234, 0.3)";
         }
       }
 
       // Função para exibir resultados
       function displayResults(data) {
-        const resultsDiv = document.getElementById('results');
-        const resultsCount = document.getElementById('resultsCount');
+        const resultsDiv = document.getElementById("results");
+        const resultsCount = document.getElementById("resultsCount");
 
         resultsCount.textContent = `${data.total} resultado(s) encontrado(s)`;
 
@@ -420,59 +713,71 @@
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Tribunal:</span>
-                        <span>${result.court || 'N/A'}</span>
+                        <span>${result.court || "N/A"}</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Grau:</span>
-                        <span>${result.degree || 'N/A'}</span>
+                        <span>${result.degree || "N/A"}</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Data:</span>
-                        <span>${result.date || 'N/A'}</span>
+                        <span>${result.date || "N/A"}</span>
                     </div>
                     ${
                       result.is_mandatory_precedent
                         ? '<div class="meta-item"><span class="precedent-badge">Precedente Obrigatório</span></div>'
-                        : ''
+                        : ""
                     }
                 </div>
             </div>
         `
           )
-          .join('');
+          .join("");
 
         resultsDiv.innerHTML = resultsHTML;
       }
 
       // Função para exibir erro
       function displayError(message) {
-        const resultsDiv = document.getElementById('results');
+        const resultsDiv = document.getElementById("results");
         resultsDiv.innerHTML = `<div class="error">${escapeHtml(
           message
         )}</div>`;
-        document.getElementById('resultsCount').textContent = '';
+        document.getElementById("resultsCount").textContent = "";
+        document.getElementById("pagination").style.display = "none";
       }
 
       // Função para escapar HTML
       function escapeHtml(text) {
-        const div = document.createElement('div');
+        const div = document.createElement("div");
         div.textContent = text;
         return div.innerHTML;
       }
 
       // Event listener para o formulário de busca
       document
-        .getElementById('searchForm')
-        .addEventListener('submit', function (e) {
+        .getElementById("searchForm")
+        .addEventListener("submit", function (e) {
           e.preventDefault();
 
-          const query = document.getElementById('queryInput').value.trim();
-          const field = document.getElementById('fieldSelect').value;
+          const query = document.getElementById("queryInput").value.trim();
+          const field = document.getElementById("fieldSelect").value;
+          const size = parseInt(document.getElementById("sizeSelect").value);
 
           if (query) {
-            performSearch(query, field);
+            // Resetar para primeira página ao fazer nova busca
+            currentPage = 1;
+            performSearch(query, field, size, 1);
           }
         });
+
+      // Event listeners para paginação
+      document
+        .getElementById("prevPage")
+        .addEventListener("click", goToPreviousPage);
+      document
+        .getElementById("nextPage")
+        .addEventListener("click", goToNextPage);
     </script>
   </body>
 </html>

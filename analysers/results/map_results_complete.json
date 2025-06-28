@@ -1,7 +1,7 @@
 {
-  "map_score": 0.704817966695478,
+  "map_score": 0.7140250548280999,
   "total_queries_processed": 253,
-  "timestamp": "2025-06-21 11:47:35",
+  "timestamp": "2025-06-28 14:50:15",
   "fix_applied": "String conversion for ID comparison",
   "note": "Full evaluation with all queries"
 }
