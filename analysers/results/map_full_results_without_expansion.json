@@ -4,10 +4,10 @@
     "mean_precision_at_10": 0.7438735177865617,
     "total_queries": 253,
     "successful_queries": 253,
-    "total_time_seconds": 33.93844437599182,
+    "total_time_seconds": 33.66120529174805,
     "use_expansion": false,
     "expansion_type": "local_only",
-    "timestamp": "2025-06-29 18:43:53"
+    "timestamp": "2025-06-29 20:18:59"
   },
   "results_by_query": [
     {
