@@ -76,45 +76,45 @@ def search():
                                 }
                             }
                         ],
-                        "should": [
-                            {
-                                "script_score": {
-                                    "query": {"match_all": {}},
-                                    "script": {
-                                        "source": """
-                                        def degree = doc['degree'].value;
-                                        def date = doc['date'].value;
+                        # "should": [
+                        #     {
+                        #         "script_score": {
+                        #             "query": {"match_all": {}},
+                        #             # "script": {
+                        #             #     "source": """
+                        #             #     def degree = doc['degree'].value;
+                        #             #     def date = doc['date'].value;
                                         
-                                        // Score baseado no grau do tribunal
-                                        def degreeScore = 0.0;
-                                        if (degree == 'DEGREE_TERCEIRO') degreeScore = 3.0;
-                                        else if (degree == 'DEGREE_SEGUNDO') degreeScore = 2.0;
-                                        else if (degree == 'DEGREE_PRIMEIRO') degreeScore = 1.0;
-                                        else degreeScore = 0.5;
+                        #             #     // Score baseado no grau do tribunal
+                        #             #     def degreeScore = 0.0;
+                        #             #     if (degree == 'DEGREE_TERCEIRO') degreeScore = 3.0;
+                        #             #     else if (degree == 'DEGREE_SEGUNDO') degreeScore = 2.0;
+                        #             #     else if (degree == 'DEGREE_PRIMEIRO') degreeScore = 1.0;
+                        #             #     else degreeScore = 0.5;
                                         
-                                        // Score baseado na data (documentos mais recentes têm maior peso)
-                                        def dateScore = 0.0;
-                                        if (date != null) {
-                                            def currentTime = System.currentTimeMillis();
-                                            def docTime = date.toInstant().toEpochMilli();
-                                            def diffDays = (currentTime - docTime) / (1000 * 60 * 60 * 24);
+                        #             #     // Score baseado na data (documentos mais recentes têm maior peso)
+                        #             #     def dateScore = 0.0;
+                        #             #     if (date != null) {
+                        #             #         def currentTime = System.currentTimeMillis();
+                        #             #         def docTime = date.toInstant().toEpochMilli();
+                        #             #         def diffDays = (currentTime - docTime) / (1000 * 60 * 60 * 24);
                                             
-                                            // Score decresce com o tempo: 1.0 para documentos de hoje, 0.1 para documentos muito antigos
-                                            if (diffDays <= 30) dateScore = 1.0;  // Último mês
-                                            else if (diffDays <= 365) dateScore = 0.8;  // Último ano
-                                            else if (diffDays <= 1825) dateScore = 0.6;  // Últimos 5 anos
-                                            else if (diffDays <= 3650) dateScore = 0.4;  // Últimos 10 anos
-                                            else dateScore = 0.1;  // Mais antigo
-                                        }
+                        #             #         // Score decresce com o tempo: 1.0 para documentos de hoje, 0.1 para documentos muito antigos
+                        #             #         if (diffDays <= 30) dateScore = 1.0;  // Último mês
+                        #             #         else if (diffDays <= 365) dateScore = 0.8;  // Último ano
+                        #             #         else if (diffDays <= 1825) dateScore = 0.6;  // Últimos 5 anos
+                        #             #         else if (diffDays <= 3650) dateScore = 0.4;  // Últimos 10 anos
+                        #             #         else dateScore = 0.1;  // Mais antigo
+                        #             #     }
                                         
-                                        // Combinar scores (70% grau do tribunal, 30% data)
-                                        return (degreeScore * 0.7) + (dateScore * 0.3);
-                                        """,
-                                        "lang": "painless"
-                                    }
-                                }
-                            }
-                        ]
+                        #             #     // Combinar scores (70% grau do tribunal, 30% data)
+                        #             #     return (degreeScore * 0.7) + (dateScore * 0.3);
+                        #             #     """,
+                        #             #     "lang": "painless"
+                        #             # }
+                        #         }
+                        #     }
+                        # ]
                     }
                 }
             else:
@@ -127,45 +127,45 @@ def search():
                                 }
                             }
                         ],
-                        "should": [
-                            {
-                                "script_score": {
-                                    "query": {"match_all": {}},
-                                    "script": {
-                                        "source": """
-                                        def degree = doc['degree'].value;
-                                        def date = doc['date'].value;
+                        # "should": [
+                        #     {
+                        #         "script_score": {
+                        #             "query": {"match_all": {}},
+                        #             # "script": {
+                        #             #     "source": """
+                        #             #     def degree = doc['degree'].value;
+                        #             #     def date = doc['date'].value;
                                         
-                                        // Score baseado no grau do tribunal
-                                        def degreeScore = 0.0;
-                                        if (degree == 'TERCEIRA_INSTANCIA') degreeScore = 3.0;
-                                        else if (degree == 'SEGUNDA_INSTANCIA') degreeScore = 2.0;
-                                        else if (degree == 'PRIMEIRA_INSTANCIA') degreeScore = 1.0;
-                                        else degreeScore = 0.5;
+                        #             #     // Score baseado no grau do tribunal
+                        #             #     def degreeScore = 0.0;
+                        #             #     if (degree == 'TERCEIRA_INSTANCIA') degreeScore = 3.0;
+                        #             #     else if (degree == 'SEGUNDA_INSTANCIA') degreeScore = 2.0;
+                        #             #     else if (degree == 'PRIMEIRA_INSTANCIA') degreeScore = 1.0;
+                        #             #     else degreeScore = 0.5;
                                         
-                                        // Score baseado na data (documentos mais recentes têm maior peso)
-                                        def dateScore = 0.0;
-                                        if (date != null) {
-                                            def currentTime = System.currentTimeMillis();
-                                            def docTime = date.toInstant().toEpochMilli();
-                                            def diffDays = (currentTime - docTime) / (1000 * 60 * 60 * 24);
+                        #             #     // Score baseado na data (documentos mais recentes têm maior peso)
+                        #             #     def dateScore = 0.0;
+                        #             #     if (date != null) {
+                        #             #         def currentTime = System.currentTimeMillis();
+                        #             #         def docTime = date.toInstant().toEpochMilli();
+                        #             #         def diffDays = (currentTime - docTime) / (1000 * 60 * 60 * 24);
                                             
-                                            // Score decresce com o tempo: 1.0 para documentos de hoje, 0.1 para documentos muito antigos
-                                            if (diffDays <= 30) dateScore = 1.0;  // Último mês
-                                            else if (diffDays <= 365) dateScore = 0.8;  // Último ano
-                                            else if (diffDays <= 1825) dateScore = 0.6;  // Últimos 5 anos
-                                            else if (diffDays <= 3650) dateScore = 0.4;  // Últimos 10 anos
-                                            else dateScore = 0.1;  // Mais antigo
-                                        }
+                        #             #         // Score decresce com o tempo: 1.0 para documentos de hoje, 0.1 para documentos muito antigos
+                        #             #         if (diffDays <= 30) dateScore = 1.0;  // Último mês
+                        #             #         else if (diffDays <= 365) dateScore = 0.8;  // Último ano
+                        #             #         else if (diffDays <= 1825) dateScore = 0.6;  // Últimos 5 anos
+                        #             #         else if (diffDays <= 3650) dateScore = 0.4;  // Últimos 10 anos
+                        #             #         else dateScore = 0.1;  // Mais antigo
+                        #             #     }
                                         
-                                        // Combinar scores (70% grau do tribunal, 30% data)
-                                        return (degreeScore * 0.7) + (dateScore * 0.3);
-                                        """,
-                                        "lang": "painless"
-                                    }
-                                }
-                            }
-                        ]
+                        #             #     // Combinar scores (70% grau do tribunal, 30% data)
+                        #             #     return (degreeScore * 0.7) + (dateScore * 0.3);
+                        #             #     """,
+                        #             #     "lang": "painless"
+                        #             # }
+                        #         }
+                        #     }
+                        # ]
                     }
                 }
             

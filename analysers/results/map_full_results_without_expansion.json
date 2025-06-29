@@ -1,25 +1,25 @@
 {
   "metadata": {
-    "map_score": 0.7089891571322576,
-    "mean_precision_at_10": 0.7418972332015815,
+    "map_score": 0.7145460753069959,
+    "mean_precision_at_10": 0.7438735177865617,
     "total_queries": 253,
     "successful_queries": 253,
-    "total_time_seconds": 37.838659048080444,
+    "total_time_seconds": 33.93844437599182,
     "use_expansion": false,
     "expansion_type": "local_only",
-    "timestamp": "2025-06-29 17:41:10"
+    "timestamp": "2025-06-29 18:43:53"
   },
   "results_by_query": [
     {
       "query": "A ameaça não se configura apenas com palavras vagas ou desprovidas de contexto, sendo imprescindível que haja a demonstração de que a vítima estava diante de um perigo concreto de mal injusto e grave",
-      "ap": 0.12624716553287982,
+      "ap": 0.1259803921568627,
       "precision_at_10": 0.3,
       "total_relevant": 12,
       "total_documents": 16
     },
     {
       "query": "ação para tutela da saúde mental",
-      "ap": 0.6670933254911583,
+      "ap": 0.6735035819014148,
       "precision_at_10": 0.5,
       "total_relevant": 13,
       "total_documents": 17
@@ -33,35 +33,35 @@
     },
     {
       "query": "adicional de insalubridade",
-      "ap": 0.5362260968542115,
-      "precision_at_10": 0.5,
+      "ap": 0.6185935246380061,
+      "precision_at_10": 0.6,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "advogado que atuou na fase de conhecimento até o trânsito em julgado",
-      "ap": 0.8383959899749374,
+      "ap": 0.8463037388868591,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "agravo de instrumento bloqueio cnh e passaporte",
-      "ap": 0.4815720160720382,
-      "precision_at_10": 0.6,
+      "ap": 0.4527787216597392,
+      "precision_at_10": 0.4,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "alteração da CDA após propositura da ação de execução fiscal",
-      "ap": 0.962159053070825,
+      "ap": 0.9595329332102187,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "anulação do auto de infração e extinção da execução",
-      "ap": 0.685309646493857,
+      "ap": 0.6984064439172798,
       "precision_at_10": 0.8,
       "total_relevant": 19,
       "total_documents": 19
@@ -75,85 +75,85 @@
     },
     {
       "query": "bloqueio de proventos de natureza alimentar",
-      "ap": 0.42642695075891557,
+      "ap": 0.45278809275519805,
       "precision_at_10": 0.5,
       "total_relevant": 16,
       "total_documents": 17
     },
     {
       "query": "cabimento de honorários advocatícios na execução de alimentos",
-      "ap": 0.5493343462093461,
+      "ap": 0.5632413447349888,
       "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 16
     },
     {
       "query": "cancelamento de voo trecho terrestre",
-      "ap": 0.9445983379501385,
+      "ap": 0.9473684210526315,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "clemência",
-      "ap": 0.9852889124255425,
+      "ap": 0.9945983379501384,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "cobrança de multa em cumprimento de sentença. súmula 410 do stj",
-      "ap": 0.8020186367091131,
+      "ap": 0.8301559923097318,
       "precision_at_10": 0.9,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "contestação  cobrança abusiva",
-      "ap": 0.7827136089188845,
-      "precision_at_10": 0.9,
+      "ap": 0.8110558647262248,
+      "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "contrato de consórcio tutela antecipada prática e cláusula abusivas",
-      "ap": 0.7949106104103975,
+      "ap": 0.8072685892538835,
       "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 19
     },
     {
       "query": "contrato está ilegível",
-      "ap": 0.7813038377744259,
-      "precision_at_10": 0.9,
+      "ap": 0.7825221836986543,
+      "precision_at_10": 0.8,
       "total_relevant": 15,
       "total_documents": 18
     },
     {
       "query": "contrato leonino",
-      "ap": 0.732070961525979,
+      "ap": 0.7352572360357829,
       "precision_at_10": 0.8,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "defesa tribunal de contas",
-      "ap": 0.8484726873118462,
-      "precision_at_10": 1.0,
+      "ap": 0.8154913323284079,
+      "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "doença, exercito, musico, perda auditiva",
-      "ap": 0.8521979191354836,
+      "ap": 0.8578607349440682,
       "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 19
     },
     {
       "query": "duração de inquérito policial",
-      "ap": 0.8389385124679244,
-      "precision_at_10": 0.8,
+      "ap": 0.881452812854197,
+      "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 17
     },
@@ -173,35 +173,35 @@
     },
     {
       "query": "escoliose dorso-lombar",
-      "ap": 0.8731755581020287,
-      "precision_at_10": 0.9,
+      "ap": 0.8533644664159371,
+      "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 16
     },
     {
       "query": "exame dna laboratório indicado pelas partes exame pago",
-      "ap": 0.7916666666666666,
+      "ap": 0.37777777777777777,
       "precision_at_10": 0.3,
       "total_relevant": 3,
       "total_documents": 18
     },
     {
       "query": "exceção de pré-executividade",
-      "ap": 0.6977896740151641,
-      "precision_at_10": 0.8,
+      "ap": 0.7562080544536683,
+      "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "execução bloqueio de cnh tjgo",
-      "ap": 0.8528802545535389,
-      "precision_at_10": 0.8,
+      "ap": 0.8622433122433124,
+      "precision_at_10": 0.9,
       "total_relevant": 14,
       "total_documents": 16
     },
     {
       "query": "execução de honorários em embargos à execução fiscal",
-      "ap": 0.46486568986568994,
+      "ap": 0.4911996269037873,
       "precision_at_10": 0.7,
       "total_relevant": 12,
       "total_documents": 19
@@ -215,70 +215,70 @@
     },
     {
       "query": "imóvel mutuado propriedade consolidada pela cef",
-      "ap": 0.8709641751437417,
+      "ap": 0.8816158042164235,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "indeferimento do pedido de devolução de prazo para interposição de recurso",
-      "ap": 0.7292440912845324,
+      "ap": 0.7394856879231878,
       "precision_at_10": 0.9,
       "total_relevant": 16,
       "total_documents": 18
     },
     {
       "query": "inexistência de inventário e partilha posse",
-      "ap": 0.6096282084918448,
-      "precision_at_10": 0.7,
+      "ap": 0.6490248313777726,
+      "precision_at_10": 0.8,
       "total_relevant": 11,
       "total_documents": 19
     },
     {
       "query": "inss benefício suspenso aposentadoria por fraude",
-      "ap": 0.7412824279792605,
+      "ap": 0.7446760931376316,
       "precision_at_10": 0.7,
       "total_relevant": 13,
       "total_documents": 14
     },
     {
       "query": "invalidade dos controles de jornada",
-      "ap": 0.8533834586466165,
+      "ap": 0.8660818713450292,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 19
     },
     {
       "query": "juizado especial extincao por ausencia de bens",
-      "ap": 0.2364240828048031,
-      "precision_at_10": 0.1,
+      "ap": 0.25744440707725785,
+      "precision_at_10": 0.2,
       "total_relevant": 13,
       "total_documents": 19
     },
     {
       "query": "laudo particular e perícia médica  RI auxilio doença continuidade",
-      "ap": 0.7135339761994904,
+      "ap": 0.7065516107212212,
       "precision_at_10": 0.8,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "litisconsórcio necessário, passivo. aditamento",
-      "ap": 0.666574397824398,
+      "ap": 0.6828258094562444,
       "precision_at_10": 0.7,
       "total_relevant": 16,
       "total_documents": 19
     },
     {
       "query": "locação não residencial",
-      "ap": 0.8408259493770796,
-      "precision_at_10": 0.9,
+      "ap": 0.8351652971333824,
+      "precision_at_10": 0.8,
       "total_relevant": 17,
       "total_documents": 19
     },
     {
       "query": "mandado de segurança morosidade inss",
-      "ap": 0.5425758745190542,
+      "ap": 0.5628005504780352,
       "precision_at_10": 0.7,
       "total_relevant": 17,
       "total_documents": 18
@@ -292,42 +292,42 @@
     },
     {
       "query": "nos termos da súmula 287 do stj, a taxa básica financeira",
-      "ap": 0.9377990430622009,
+      "ap": 0.9398496240601504,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "o recurso ordinario e cabivel contra decisão denegatoria de mandado de segurança",
-      "ap": 0.5375416706831181,
-      "precision_at_10": 0.8,
+      "ap": 0.5062814789377289,
+      "precision_at_10": 0.6,
       "total_relevant": 16,
       "total_documents": 18
     },
     {
       "query": "penhora salário mínimo existencial",
-      "ap": 0.6714700519711719,
+      "ap": 0.6943745622168654,
       "precision_at_10": 0.9,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "prática de crime equiparado a hediondo",
-      "ap": 0.9890350877192983,
+      "ap": 0.9873684210526317,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "princípio da função social dos contratos",
-      "ap": 0.44306002297805575,
+      "ap": 0.4689965994643255,
       "precision_at_10": 0.6,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "qualidade de segurado acidente sofrido no primeiro dia de trabalho",
-      "ap": 0.7552055987098557,
+      "ap": 0.7723403967556949,
       "precision_at_10": 0.7,
       "total_relevant": 16,
       "total_documents": 18
@@ -341,28 +341,28 @@
     },
     {
       "query": "responsabilidade manutenção do imóvel locado",
-      "ap": 0.8849142870509172,
+      "ap": 0.8841635363001664,
       "precision_at_10": 0.9,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "retardo mental moderado Estado e Municipio",
-      "ap": 0.6804265839304203,
+      "ap": 0.6769969313676408,
       "precision_at_10": 0.7,
       "total_relevant": 15,
       "total_documents": 17
     },
     {
       "query": "súmula 612/stj",
-      "ap": 0.8320586820586819,
+      "ap": 0.8631857421331106,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 19
     },
     {
       "query": "Súmula nº 678 do supremo tribunal federal",
-      "ap": 0.49816017316017314,
+      "ap": 0.5095238095238095,
       "precision_at_10": 0.7,
       "total_relevant": 11,
       "total_documents": 12
@@ -376,21 +376,21 @@
     },
     {
       "query": "tentativa de retardar o cumprimento da decisão judicial",
-      "ap": 0.2938430635613734,
+      "ap": 0.3073605523091824,
       "precision_at_10": 0.4,
       "total_relevant": 12,
       "total_documents": 18
     },
     {
       "query": "ação de indenização por danos morais e materiais c.c. alimentos",
-      "ap": 0.1448159538924918,
+      "ap": 0.15368071246574683,
       "precision_at_10": 0.2,
       "total_relevant": 8,
       "total_documents": 17
     },
     {
       "query": "adicionais de periculosidade e por tempo de serviço",
-      "ap": 0.9383413594952056,
+      "ap": 0.9255208466746928,
       "precision_at_10": 0.9,
       "total_relevant": 13,
       "total_documents": 13
@@ -411,7 +411,7 @@
     },
     {
       "query": "agravo de petição contra apreensão passaporte",
-      "ap": 0.584434465794115,
+      "ap": 0.5817151675485009,
       "precision_at_10": 0.8,
       "total_relevant": 18,
       "total_documents": 18
@@ -425,28 +425,28 @@
     },
     {
       "query": "apelação e oposição e má-fé",
-      "ap": 0.6793040293040293,
+      "ap": 0.6887823034557888,
       "precision_at_10": 0.7,
       "total_relevant": 13,
       "total_documents": 18
     },
     {
       "query": "aposentadoria por idade de marisqueira, comprovação de trabalho em regime de economia familiar com filha solteira",
-      "ap": 1.0,
+      "ap": 0.75,
       "precision_at_10": 0.2,
       "total_relevant": 2,
       "total_documents": 4
     },
     {
       "query": "aposentadoria por idade reafirmação da der",
-      "ap": 0.9142713223079335,
+      "ap": 0.9188497056576642,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "art 106 cpc",
-      "ap": 0.546583555288385,
+      "ap": 0.6031163023423086,
       "precision_at_10": 0.8,
       "total_relevant": 17,
       "total_documents": 18
@@ -460,21 +460,21 @@
     },
     {
       "query": "Art. 22 da Lei 12965/14",
-      "ap": 0.3218016006743026,
-      "precision_at_10": 0.5,
+      "ap": 0.4164392171780622,
+      "precision_at_10": 0.6,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "art. 489 embargos declaração",
-      "ap": 0.7945922960018704,
-      "precision_at_10": 1.0,
+      "ap": 0.7932335713855111,
+      "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 17
     },
     {
       "query": "art. 65 da lcp. absolvição",
-      "ap": 0.674704618689581,
+      "ap": 0.6543990948413025,
       "precision_at_10": 0.4,
       "total_relevant": 7,
       "total_documents": 14
@@ -488,77 +488,77 @@
     },
     {
       "query": "associação irregularidade constituicao",
-      "ap": 0.3923809523809524,
-      "precision_at_10": 0.2,
+      "ap": 0.44360352291386773,
+      "precision_at_10": 0.3,
       "total_relevant": 5,
       "total_documents": 19
     },
     {
       "query": "astreintes facebook",
-      "ap": 0.7888894906250875,
+      "ap": 0.7410570353171422,
       "precision_at_10": 0.8,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "atendimento em tempo integral por enfermeiro",
-      "ap": 0.8634085213032582,
+      "ap": 0.8629130966952264,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "AUSÊNCIA DE COMPROVAÇÃO DA CONTRATAÇÃO.",
-      "ap": 0.7500713429634998,
+      "ap": 0.7557295898498168,
       "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 19
     },
     {
       "query": "auxiliar local de missão diplomática ou repartição consular",
-      "ap": 0.8826407012825698,
+      "ap": 0.9022485444198246,
       "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "banco dano moral tjpe 2024",
-      "ap": 0.47406157353475364,
+      "ap": 0.4456332672151329,
       "precision_at_10": 0.6,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "benefício assistencial renda",
-      "ap": 0.6528428978428978,
-      "precision_at_10": 0.9,
+      "ap": 0.638406870906871,
+      "precision_at_10": 0.8,
       "total_relevant": 15,
       "total_documents": 15
     },
     {
       "query": "bloqueio indevido de valores em conta bancária",
-      "ap": 0.914311148885116,
+      "ap": 0.9213793802180531,
       "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "cargo em comissao. ferias",
-      "ap": 0.23762962482474678,
+      "ap": 0.2759526386832384,
       "precision_at_10": 0.3,
       "total_relevant": 16,
       "total_documents": 17
     },
     {
       "query": "cef. indenização por dano moral",
-      "ap": 0.47413534858387796,
+      "ap": 0.44920148615001554,
       "precision_at_10": 0.5,
       "total_relevant": 12,
       "total_documents": 17
     },
     {
       "query": "citação decretada nula não pode interromper o prazo prescricional",
-      "ap": 0.7698305059031701,
+      "ap": 0.7761631825144846,
       "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 18
@@ -572,36 +572,36 @@
     },
     {
       "query": "consulta por telefone",
-      "ap": 0.841757443718228,
+      "ap": 0.8331154684095861,
       "precision_at_10": 0.7,
       "total_relevant": 9,
       "total_documents": 12
     },
     {
       "query": "contrato honorarios ação alimentos",
-      "ap": 0.29087818118912295,
+      "ap": 0.2783760035585464,
       "precision_at_10": 0.3,
       "total_relevant": 8,
       "total_documents": 18
     },
     {
       "query": "cpc - art. 1018",
-      "ap": 0.43184177977411053,
+      "ap": 0.43197703855598585,
       "precision_at_10": 0.7,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "crime omissivo impróprio",
-      "ap": 0.751937984496124,
+      "ap": 0.7583333333333333,
       "precision_at_10": 1.0,
       "total_relevant": 15,
       "total_documents": 15
     },
     {
       "query": "dano moral clt",
-      "ap": 0.21332318233443318,
-      "precision_at_10": 0.3,
+      "ap": 0.38648742680072606,
+      "precision_at_10": 0.5,
       "total_relevant": 18,
       "total_documents": 18
     },
@@ -614,21 +614,21 @@
     },
     {
       "query": "da vulnerabilidade do cliente vitima de golpe banco",
-      "ap": 0.9846178286129265,
+      "ap": 0.9880900508351487,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "dedução da contribuição previdenciária antes da aplicação dos juros",
-      "ap": 0.6719632362821217,
+      "ap": 0.662174263644852,
       "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "defesa crm",
-      "ap": 0.4495851370851371,
+      "ap": 0.4582656926406926,
       "precision_at_10": 0.6,
       "total_relevant": 8,
       "total_documents": 14
@@ -642,21 +642,21 @@
     },
     {
       "query": "desapropriaçao 80% antes da sentença e 20% após o transito em julgado",
-      "ap": 0.32181453983924424,
+      "ap": 0.3281018754400557,
       "precision_at_10": 0.5,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "descumprimento de acórdão anterior pelo juiz a quo",
-      "ap": 0.7902210884353743,
+      "ap": 0.8076786488551193,
       "precision_at_10": 0.9,
       "total_relevant": 14,
       "total_documents": 19
     },
     {
       "query": "desistência antes recebimento desnecessidade anuência",
-      "ap": 0.9134125198139039,
+      "ap": 0.911710961997795,
       "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 18
@@ -670,147 +670,147 @@
     },
     {
       "query": "dificuldade financeira do alimentante",
-      "ap": 0.5475763018681921,
-      "precision_at_10": 0.6,
+      "ap": 0.5850170327922726,
+      "precision_at_10": 0.7,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "direcionamento licitação exigência técnica MINISTÉRIO PÚBLICO",
-      "ap": 0.9270795497686256,
+      "ap": 0.9342224069114826,
       "precision_at_10": 0.9,
       "total_relevant": 14,
       "total_documents": 16
     },
     {
       "query": "divulgação indevida de dados pessoais",
-      "ap": 0.9090909090909091,
+      "ap": 0.9157894736842105,
       "precision_at_10": 1.0,
       "total_relevant": 15,
       "total_documents": 15
     },
     {
       "query": "embargos de declaração estupro",
-      "ap": 0.5923450732274262,
+      "ap": 0.5920676037490689,
       "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 19
     },
     {
       "query": "emenda parlamentar",
-      "ap": 0.8957794553994723,
+      "ap": 0.8930508088402827,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "empréstimo de dinheiro entre pessoas físicas",
-      "ap": 0.7580072463768116,
+      "ap": 0.7676436188510493,
       "precision_at_10": 0.9,
       "total_relevant": 15,
       "total_documents": 19
     },
     {
       "query": "exame de reclassificação",
-      "ap": 0.9495410343624631,
+      "ap": 0.9466170577542758,
       "precision_at_10": 1.0,
       "total_relevant": 14,
       "total_documents": 17
     },
     {
       "query": "extinção da fiança",
-      "ap": 0.8827160493827161,
+      "ap": 0.8888888888888888,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "fazenda pública. direito indisponível",
-      "ap": 0.6447032956901377,
+      "ap": 0.6713552474403777,
       "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 16
     },
     {
       "query": "fracionamento com área de 250m2",
-      "ap": 0.9202504531224255,
+      "ap": 0.9195728291316527,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 19
     },
     {
       "query": "honorários advocatícios estipulados no contrato de locação",
-      "ap": 0.6741828847675623,
+      "ap": 0.6984576653454532,
       "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 17
     },
     {
       "query": "impossibilidade de denunciação à lide",
-      "ap": 0.6578012478548575,
+      "ap": 0.690284939733469,
       "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 17
     },
     {
       "query": "impossibilidade legal",
-      "ap": 0.4373118978456471,
-      "precision_at_10": 0.5,
+      "ap": 0.5701237943343205,
+      "precision_at_10": 0.7,
       "total_relevant": 15,
       "total_documents": 17
     },
     {
       "query": "impugnação de voto",
-      "ap": 0.36431623931623935,
+      "ap": 0.34816091954022993,
       "precision_at_10": 0.2,
       "total_relevant": 6,
       "total_documents": 11
     },
     {
       "query": "indeferimento da inicial ao argumento de litispendência",
-      "ap": 0.5121516210893297,
-      "precision_at_10": 0.7,
+      "ap": 0.5187850272812679,
+      "precision_at_10": 0.8,
       "total_relevant": 15,
       "total_documents": 18
     },
     {
       "query": "indenização por danos morais telefonica sa",
-      "ap": 0.0013440860215053765,
+      "ap": 0.0012626262626262627,
       "precision_at_10": 0.0,
       "total_relevant": 8,
       "total_documents": 19
     },
     {
       "query": "inexeqüibilidade do título judicial",
-      "ap": 0.4383982275894041,
+      "ap": 0.4474731441398108,
       "precision_at_10": 0.6,
       "total_relevant": 15,
       "total_documents": 16
     },
     {
       "query": "inobservância do interstício mínimo entre a notificação e a audiência",
-      "ap": 0.8786764705882353,
+      "ap": 0.8754325259515571,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "intimacao do facebook servicos online do brasil",
-      "ap": 0.4407378672784269,
-      "precision_at_10": 0.5,
+      "ap": 0.475443254787295,
+      "precision_at_10": 0.6,
       "total_relevant": 16,
       "total_documents": 17
     },
     {
       "query": "intimação por edital para sessão plenária",
-      "ap": 0.9759615384615384,
+      "ap": 0.9829545454545454,
       "precision_at_10": 1.0,
       "total_relevant": 16,
       "total_documents": 18
     },
     {
       "query": "intimação prévia para o julgamento antecipado da lide",
-      "ap": 0.4796977124183006,
+      "ap": 0.48585155857214685,
       "precision_at_10": 0.5,
       "total_relevant": 10,
       "total_documents": 17
@@ -824,85 +824,85 @@
     },
     {
       "query": "juros abusivos perfil de risco",
-      "ap": 0.9164462081128748,
+      "ap": 0.9318181818181819,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "laudo ambiental não configura insalubridade",
-      "ap": 0.656047619047619,
+      "ap": 0.6904790930652999,
       "precision_at_10": 0.9,
       "total_relevant": 15,
       "total_documents": 19
     },
     {
       "query": "Lei nº 12.506/2011 não se aplica a caso de pedido de demissão",
-      "ap": 0.879145988420182,
+      "ap": 0.8934829059829059,
       "precision_at_10": 1.0,
       "total_relevant": 15,
       "total_documents": 18
     },
     {
       "query": "Majoração de alimentos sem provas",
-      "ap": 0.7571919484323576,
+      "ap": 0.7602318433200786,
       "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "MANDADO DE SEGURANÇA. PREVIDENCIÁRIO. PEDIDO DE CONCESSÃO DE BENEFÍCIO. DEMORA NA analise de marcação de pericia médica",
-      "ap": 0.647380356571533,
+      "ap": 0.6432836833172512,
       "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 17
     },
     {
       "query": "manifestação sobre acordo extrajudicial",
-      "ap": 0.6204518840947623,
+      "ap": 0.6542874566094381,
       "precision_at_10": 0.8,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "modelo de agravo de instrumento penhora de salário",
-      "ap": 0.4847967250141164,
+      "ap": 0.4867399841537774,
       "precision_at_10": 0.6,
       "total_relevant": 13,
       "total_documents": 13
     },
     {
       "query": "monitoria, sentença",
-      "ap": 0.02758857929136567,
+      "ap": 0.02797304680386086,
       "precision_at_10": 0.1,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "morte do contratante",
-      "ap": 0.8397492655764716,
+      "ap": 0.8509805709641236,
       "precision_at_10": 0.9,
       "total_relevant": 16,
       "total_documents": 16
     },
     {
       "query": "namoro e noivado",
-      "ap": 0.931922097510333,
-      "precision_at_10": 0.8,
+      "ap": 0.9440433096315451,
+      "precision_at_10": 0.9,
       "total_relevant": 15,
       "total_documents": 15
     },
     {
       "query": "não apreensão da arma de fogo e ausência de exame pericial",
-      "ap": 0.7565712612694037,
+      "ap": 0.7375294259117788,
       "precision_at_10": 0.8,
       "total_relevant": 15,
       "total_documents": 18
     },
     {
       "query": "não comunicação da interposição do agravo conflito decisão primeiro grau",
-      "ap": 0.3962962962962963,
-      "precision_at_10": 0.4,
+      "ap": 0.343859649122807,
+      "precision_at_10": 0.3,
       "total_relevant": 6,
       "total_documents": 19
     },
@@ -922,28 +922,28 @@
     },
     {
       "query": "negligência da empresa de energia elétrica perigo de vida",
-      "ap": 0.7254371947810861,
+      "ap": 0.6897061272061273,
       "precision_at_10": 0.7,
       "total_relevant": 13,
       "total_documents": 19
     },
     {
       "query": "paciente expulso de clínica psiquiátrica",
-      "ap": 0.7662698412698413,
+      "ap": 0.8357142857142857,
       "precision_at_10": 0.6,
       "total_relevant": 6,
       "total_documents": 18
     },
     {
       "query": "parcelado facil bradesco",
-      "ap": 0.9036753932342169,
+      "ap": 0.9022274294333118,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "partilha de bens imóveis não registrados",
-      "ap": 0.9063956111290671,
+      "ap": 0.9116563991563992,
       "precision_at_10": 0.9,
       "total_relevant": 16,
       "total_documents": 18
@@ -957,56 +957,56 @@
     },
     {
       "query": "perda parcial de movimentos dos dedos erro médico",
-      "ap": 0.7615311515969411,
+      "ap": 0.7599453242835595,
       "precision_at_10": 0.7,
       "total_relevant": 10,
       "total_documents": 19
     },
     {
       "query": "plano saúde intransmissibilidade morte",
-      "ap": 0.9523826173826174,
+      "ap": 0.9328038250019675,
       "precision_at_10": 0.9,
       "total_relevant": 15,
       "total_documents": 19
     },
     {
       "query": "prisão preventiva reu pronunciado analise de pedido de liberdade",
-      "ap": 0.8488597533464988,
+      "ap": 0.8724810323083352,
       "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 18
     },
     {
       "query": "produtos comercializados sem registro na anvisa",
-      "ap": 0.9404286563110094,
+      "ap": 0.9397205953088307,
       "precision_at_10": 0.9,
       "total_relevant": 15,
       "total_documents": 19
     },
     {
       "query": "Reclamatória Trabalhista - Rescisão Indireta",
-      "ap": 0.7535524417103365,
+      "ap": 0.7654299891141998,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "replica a contestação aposentadoria por idade",
-      "ap": 0.370387863233258,
+      "ap": 0.40562124841859976,
       "precision_at_10": 0.4,
       "total_relevant": 12,
       "total_documents": 18
     },
     {
       "query": "rescisão indireta magazine luiza",
-      "ap": 0.7750899685110213,
+      "ap": 0.7871794871794873,
       "precision_at_10": 0.9,
       "total_relevant": 13,
       "total_documents": 18
     },
     {
       "query": "Rescisão Indireta pela Recuperação Judicial",
-      "ap": 0.09722222222222221,
+      "ap": 0.12222222222222223,
       "precision_at_10": 0.2,
       "total_relevant": 6,
       "total_documents": 19
@@ -1020,21 +1020,21 @@
     },
     {
       "query": "revogação de substabelecimento",
-      "ap": 0.7401004247402372,
+      "ap": 0.7330310584477251,
       "precision_at_10": 0.8,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "subtração de valor apreendido com assaltante",
-      "ap": 0.27777777777777773,
+      "ap": 0.21666666666666667,
       "precision_at_10": 0.2,
       "total_relevant": 3,
       "total_documents": 17
     },
     {
       "query": "Súmula 410 - juizado - inaplicabilidade",
-      "ap": 0.8705383814143242,
+      "ap": 0.8846759002358449,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
@@ -1048,7 +1048,7 @@
     },
     {
       "query": "termo de quitação contrato advogado",
-      "ap": 0.04487179487179487,
+      "ap": 0.04163162321278385,
       "precision_at_10": 0.0,
       "total_relevant": 2,
       "total_documents": 18
@@ -1062,8 +1062,8 @@
     },
     {
       "query": "abordagem de ônibus por policiais militares",
-      "ap": 0.6864191364191364,
-      "precision_at_10": 0.5,
+      "ap": 0.7202165402823297,
+      "precision_at_10": 0.6,
       "total_relevant": 12,
       "total_documents": 19
     },
@@ -1076,7 +1076,7 @@
     },
     {
       "query": "ação de nulidade de inventário/partilha extrajudicial",
-      "ap": 0.9911764705882353,
+      "ap": 0.9967320261437908,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 18
@@ -1090,14 +1090,14 @@
     },
     {
       "query": "alimentos provisórios tutela de urgência",
-      "ap": 0.8841935355975212,
+      "ap": 0.9049571513002365,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "alteração fator de multiplicação. energia. alteração",
-      "ap": 0.9246031746031745,
+      "ap": 0.9233716475095785,
       "precision_at_10": 0.8,
       "total_relevant": 9,
       "total_documents": 18
@@ -1111,7 +1111,7 @@
     },
     {
       "query": "apelação pedido de efeito suspensivo tutela concedida tjsp 2024",
-      "ap": 0.7856411122368568,
+      "ap": 0.7770707439139642,
       "precision_at_10": 0.9,
       "total_relevant": 12,
       "total_documents": 19
@@ -1125,35 +1125,35 @@
     },
     {
       "query": "apreensão de passaportes como medida acautelatória",
-      "ap": 0.5768185771562788,
+      "ap": 0.5655423891366945,
       "precision_at_10": 0.7,
       "total_relevant": 16,
       "total_documents": 18
     },
     {
       "query": "art. 174 ctn . nulidade da cda PRESCRIÇÃO",
-      "ap": 0.901974832165144,
+      "ap": 0.914316574378494,
       "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "art. 27 da lei 13146/15",
-      "ap": 0.2518109668109668,
+      "ap": 0.20641095599078793,
       "precision_at_10": 0.4,
       "total_relevant": 14,
       "total_documents": 18
     },
     {
       "query": "art. 840 do código civil",
-      "ap": 0.9301804812834225,
+      "ap": 0.965832509474378,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "assinatura do ar por terceiro",
-      "ap": 0.9186903959051638,
+      "ap": 0.9566748130761971,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 17
@@ -1167,14 +1167,14 @@
     },
     {
       "query": "ausência de demonstração da necessidade de prisão preventiva",
-      "ap": 0.920758208748405,
+      "ap": 0.9338596015218038,
       "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "ausência de pagamento no prazo de 15 dias",
-      "ap": 0.7780071067275027,
+      "ap": 0.7886698178364845,
       "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 18
@@ -1188,42 +1188,42 @@
     },
     {
       "query": "auxílio-acidente avc",
-      "ap": 0.9481793737308444,
+      "ap": 0.9516260649073149,
       "precision_at_10": 0.9,
       "total_relevant": 16,
       "total_documents": 19
     },
     {
       "query": "avaria dano causado mercadoria transporte",
-      "ap": 0.9616443068455452,
+      "ap": 0.9698112759925507,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 19
     },
     {
       "query": "baixa do gravame responsabilidade da instituição financeira TJGO",
-      "ap": 0.9667340172822628,
+      "ap": 0.9736071369004805,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 19
     },
     {
       "query": "bloqueio valor fase cumprimento sentenca",
-      "ap": 0.6378079285291088,
+      "ap": 0.6206810736861889,
       "precision_at_10": 0.7,
       "total_relevant": 17,
       "total_documents": 20
     },
     {
       "query": "caracterizada ma fe plano saude",
-      "ap": 0.17252852980215672,
+      "ap": 0.16268345985737287,
       "precision_at_10": 0.3,
       "total_relevant": 9,
       "total_documents": 17
     },
     {
       "query": "CID r042",
-      "ap": 0.2213759974382042,
+      "ap": 0.24345056470313656,
       "precision_at_10": 0.2,
       "total_relevant": 13,
       "total_documents": 13
@@ -1237,7 +1237,7 @@
     },
     {
       "query": "citacao acao consignacao pagamento",
-      "ap": 0.04895983557209136,
+      "ap": 0.04922564767664053,
       "precision_at_10": 0.0,
       "total_relevant": 19,
       "total_documents": 19
@@ -1258,42 +1258,42 @@
     },
     {
       "query": "configuração da relação de consumo",
-      "ap": 0.7171072683791655,
+      "ap": 0.7966454402610815,
       "precision_at_10": 0.9,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "consignação em pagamento. credor",
-      "ap": 0.6797799119197244,
+      "ap": 0.7023109091291719,
       "precision_at_10": 0.8,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "contestação apresentada antes da audiência de justificação",
-      "ap": 0.9314383023022729,
+      "ap": 0.9293294379231879,
       "precision_at_10": 0.9,
       "total_relevant": 16,
       "total_documents": 19
     },
     {
       "query": "contestação imissão de posse. enel. terreno.",
-      "ap": 0.7141842008121078,
+      "ap": 0.7264682539682539,
       "precision_at_10": 0.7,
       "total_relevant": 10,
       "total_documents": 17
     },
     {
       "query": "contrato de seguro de veículo, aplicação do código de defesa do consumidor, danos morais",
-      "ap": 0.915752723154039,
+      "ap": 0.9141056094640654,
       "precision_at_10": 0.9,
       "total_relevant": 16,
       "total_documents": 18
     },
     {
       "query": "cuidadora de enfermo e doméstica acúmulo de função",
-      "ap": 0.9585576040121495,
+      "ap": 0.9777495232040686,
       "precision_at_10": 0.9,
       "total_relevant": 11,
       "total_documents": 17
@@ -1307,22 +1307,22 @@
     },
     {
       "query": "data da sentença e data de sua publicação",
-      "ap": 0.5670424047235642,
+      "ap": 0.6347746470553487,
       "precision_at_10": 0.6,
       "total_relevant": 9,
       "total_documents": 18
     },
     {
       "query": "defesa dano moral trabalhista",
-      "ap": 0.3592556868418937,
-      "precision_at_10": 0.5,
+      "ap": 0.3696220051046,
+      "precision_at_10": 0.4,
       "total_relevant": 13,
       "total_documents": 17
     },
     {
       "query": "defesa de grupo econômico",
-      "ap": 0.7468774893407247,
-      "precision_at_10": 0.6,
+      "ap": 0.7320874183006536,
+      "precision_at_10": 0.8,
       "total_relevant": 12,
       "total_documents": 18
     },
@@ -1342,8 +1342,8 @@
     },
     {
       "query": "desistência do processo e custas",
-      "ap": 0.7029563272984325,
-      "precision_at_10": 0.8,
+      "ap": 0.7552100187394305,
+      "precision_at_10": 0.7,
       "total_relevant": 16,
       "total_documents": 18
     },
@@ -1377,28 +1377,28 @@
     },
     {
       "query": "estado de perigo",
-      "ap": 0.9249368599898976,
+      "ap": 0.963850666972442,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "excesso de consumo decorrente de suposto vazamento",
-      "ap": 0.9622028662715931,
+      "ap": 0.9679738562091503,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 19
     },
     {
       "query": "execução fiscal impenhorabilidade de salário ausência de comprovação",
-      "ap": 0.9340639292102619,
+      "ap": 0.9543321521507117,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "execução fiscal  por desconto em folha tj pr",
-      "ap": 0.42902394876079086,
+      "ap": 0.41596342165898614,
       "precision_at_10": 0.4,
       "total_relevant": 8,
       "total_documents": 19
@@ -1426,7 +1426,7 @@
     },
     {
       "query": "guarda municipal em estágio probatório",
-      "ap": 0.9913888888888889,
+      "ap": 1.0,
       "precision_at_10": 1.0,
       "total_relevant": 15,
       "total_documents": 19
@@ -1440,7 +1440,7 @@
     },
     {
       "query": "habeas corpus manifestação do mp antes da liminar",
-      "ap": 0.765249901613538,
+      "ap": 0.8033771783771784,
       "precision_at_10": 0.7,
       "total_relevant": 11,
       "total_documents": 18
@@ -1454,21 +1454,21 @@
     },
     {
       "query": "honorarios advocaticios devidos pela seguradora",
-      "ap": 0.5068238174291971,
+      "ap": 0.49178546186218813,
       "precision_at_10": 0.5,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "impossibilidade de impetração simultânea de mandado de segurança",
-      "ap": 0.8766975308641975,
+      "ap": 0.8808641975308641,
       "precision_at_10": 0.8,
       "total_relevant": 9,
       "total_documents": 19
     },
     {
       "query": "interrogatório sem a presença de advogado",
-      "ap": 0.9612213745147182,
+      "ap": 0.9724004163955144,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
@@ -1482,7 +1482,7 @@
     },
     {
       "query": "jurisprudencia tjce pensao alimenticia a filho menor",
-      "ap": 0.08222811671087532,
+      "ap": 0.08862601214574897,
       "precision_at_10": 0.1,
       "total_relevant": 13,
       "total_documents": 18
@@ -1503,63 +1503,63 @@
     },
     {
       "query": "manipulação dos cartões ponto rescisao indireta",
-      "ap": 0.9361212929227635,
+      "ap": 0.9244632206029265,
       "precision_at_10": 0.9,
       "total_relevant": 16,
       "total_documents": 16
     },
     {
       "query": "ministério reconhece a prescrição retroativa antes das contrarrazões",
-      "ap": 0.9892934089609988,
+      "ap": 0.9852889124255425,
       "precision_at_10": 1.0,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "mitigação do princípio da adstrição nas ações de alimentos",
-      "ap": 0.964946771978022,
+      "ap": 0.9737703013897867,
       "precision_at_10": 1.0,
       "total_relevant": 16,
       "total_documents": 18
     },
     {
       "query": "modelo usucapião ordinário judicical",
-      "ap": 0.41200466200466196,
+      "ap": 0.4919117647058824,
       "precision_at_10": 0.3,
       "total_relevant": 6,
       "total_documents": 6
     },
     {
       "query": "multa 477 atraso guias",
-      "ap": 0.9856737793156478,
+      "ap": 0.9754723819352302,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "multa contratual deverá incidir apenas uma vez",
-      "ap": 0.3005795465362557,
-      "precision_at_10": 0.4,
+      "ap": 0.29744648672611484,
+      "precision_at_10": 0.3,
       "total_relevant": 12,
       "total_documents": 19
     },
     {
       "query": "necessidade de intimação pessoal da parte e de ciência ao advogado",
-      "ap": 0.7218079485770041,
+      "ap": 0.7323918987155799,
       "precision_at_10": 0.9,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "negativa de reembolso de voo. valor retido. TJ GO",
-      "ap": 0.907283877738423,
+      "ap": 0.9649678604224058,
       "precision_at_10": 0.9,
       "total_relevant": 11,
       "total_documents": 15
     },
     {
       "query": "nulidade de ato administrativo, por falta de motivação",
-      "ap": 0.8807153630683042,
+      "ap": 0.894170109515378,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 18
@@ -1573,36 +1573,36 @@
     },
     {
       "query": "oitiva de testemunha não arrolada pela acusação",
-      "ap": 0.7039866681835008,
+      "ap": 0.6744626718310929,
       "precision_at_10": 0.8,
       "total_relevant": 13,
       "total_documents": 17
     },
     {
       "query": "ônus da prova da mulher",
-      "ap": 0.564954051796157,
+      "ap": 0.6132824382824383,
       "precision_at_10": 0.5,
       "total_relevant": 7,
       "total_documents": 17
     },
     {
       "query": "pedido adicional de periculosidade frentista trt2",
-      "ap": 0.8900980392156863,
+      "ap": 0.8974913494809689,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "pedido de revogação de mandato de advogado",
-      "ap": 0.6803938224034747,
+      "ap": 0.690958743921743,
       "precision_at_10": 0.7,
       "total_relevant": 17,
       "total_documents": 18
     },
     {
       "query": "possibilidade de complemento pelo tribunal, sentença citra petita",
-      "ap": 0.837616647037603,
-      "precision_at_10": 0.9,
+      "ap": 0.8178055553515113,
+      "precision_at_10": 0.8,
       "total_relevant": 16,
       "total_documents": 19
     },
@@ -1615,35 +1615,35 @@
     },
     {
       "query": "preliminar de suspensão do processo",
-      "ap": 0.406247947454844,
+      "ap": 0.4684856582890678,
       "precision_at_10": 0.5,
       "total_relevant": 12,
       "total_documents": 18
     },
     {
       "query": "PROCEDIMENTO VOLUNTARIO",
-      "ap": 0.17893733917682453,
+      "ap": 0.17908405704425737,
       "precision_at_10": 0.2,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "quebra de contrato de seguradora",
-      "ap": 0.74510138010138,
+      "ap": 0.7548119309884015,
       "precision_at_10": 0.9,
       "total_relevant": 15,
       "total_documents": 19
     },
     {
       "query": "refis acarreta a suspensão da execução fiscal",
-      "ap": 0.9393930905695612,
+      "ap": 0.9420843631570276,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "reincidencia. auto de infração",
-      "ap": 0.5257207666752615,
+      "ap": 0.5185210758740171,
       "precision_at_10": 0.5,
       "total_relevant": 17,
       "total_documents": 18
@@ -1657,29 +1657,29 @@
     },
     {
       "query": "repositor de supermercado",
-      "ap": 0.9170995298704278,
+      "ap": 0.9125116713352008,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "resistência ao direito de regresso",
-      "ap": 0.9380003882712862,
+      "ap": 0.9416757171659133,
       "precision_at_10": 0.9,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "responsabilidade pelo aditamento do aluno. ação de obrigação de fazer.",
-      "ap": 0.9200888250036857,
+      "ap": 0.9176120448179272,
       "precision_at_10": 1.0,
       "total_relevant": 17,
       "total_documents": 17
     },
     {
       "query": "revogação",
-      "ap": 0.32361506307176247,
-      "precision_at_10": 0.4,
+      "ap": 0.3766232920091237,
+      "precision_at_10": 0.5,
       "total_relevant": 18,
       "total_documents": 18
     },
@@ -1692,7 +1692,7 @@
     },
     {
       "query": "seguro saúde título executivo extrajudicial",
-      "ap": 0.9406125663129974,
+      "ap": 0.9515288978494624,
       "precision_at_10": 1.0,
       "total_relevant": 16,
       "total_documents": 18
@@ -1706,22 +1706,22 @@
     },
     {
       "query": "trabalho doméstico + aviso prévio + rescisão indireta",
-      "ap": 0.8817577030812326,
+      "ap": 0.8722584502046744,
       "precision_at_10": 1.0,
       "total_relevant": 18,
       "total_documents": 18
     },
     {
       "query": "tratorista auxilio doença necessidade de afastamento",
-      "ap": 0.8052392987229018,
+      "ap": 0.8195894364176914,
       "precision_at_10": 0.9,
       "total_relevant": 19,
       "total_documents": 19
     },
     {
       "query": "valor da causa inferior a um salario minimo",
-      "ap": 0.42014929514929517,
-      "precision_at_10": 0.2,
+      "ap": 0.44007936507936507,
+      "precision_at_10": 0.3,
       "total_relevant": 6,
       "total_documents": 16
     },
@@ -1734,8 +1734,8 @@
     },
     {
       "query": "vida util do produto",
-      "ap": 0.8608422459893048,
-      "precision_at_10": 1.0,
+      "ap": 0.8800177945347313,
+      "precision_at_10": 0.9,
       "total_relevant": 17,
       "total_documents": 17
     }

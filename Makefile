@@ -13,6 +13,8 @@ all: build run
 app:
 	docker run --rm -it -p 5000:5000 -v $(PWD)/colecao:/app/colecao --name flask-app indexador-parquet python app.py
 
+start: build app
+
 # Roda o cálculo do MAP (dentro do Docker, conecta com Flask via rede)
 map:
 	docker run --rm -it -v $(PWD)/colecao:/app/colecao -v $(PWD)/analysers:/app/analysers --network container:flask-app indexador-parquet python analysers/calculate_map_json.py
