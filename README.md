@@ -376,3 +376,30 @@ Este script cria:
   ]
 }
 ```
+
+# Aplicação de Indexação com Docker
+
+## Como rodar
+
+1. **Build da imagem Docker:**
+
+```bash
+docker build -t indexador-parquet .
+```
+
+2. **Execute o container:**
+
+```bash
+docker run --rm -it -v $(pwd)/colecao:/app/colecao indexador-parquet
+```
+
+> O volume `-v $(pwd)/colecao:/app/colecao` garante que a pasta com o arquivo Parquet seja acessível dentro do container.
+
+3. **Configuração do Elasticsearch:**
+
+Certifique-se de que o Elasticsearch está rodando e acessível a partir do container (localhost ou IP da máquina).
+
+---
+
+- O script padrão executado é o `indexador.py`.
+- Para rodar outros scripts, altere o comando no Dockerfile ou use `docker run ... python outro_script.py`.
