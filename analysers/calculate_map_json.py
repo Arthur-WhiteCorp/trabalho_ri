@@ -7,6 +7,7 @@ import requests
 import json
 import time
 from collections import defaultdict
+import os
 
 class MAPCalculatorFull:
     def __init__(self, base_url="http://localhost:5000"):
@@ -17,11 +18,23 @@ class MAPCalculatorFull:
         """Carrega consultas do arquivo JSON"""
         print("📖 Carregando consultas do arquivo JSON...")
         
-        with open(file_path, 'r', encoding='utf-8') as f:
-            self.queries_data = json.load(f)
-        
-        print(f"✅ Carregadas {self.queries_data['metadata']['total_queries']} consultas")
-        
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                self.queries_data = json.load(f)
+            
+            print(f"✅ Carregadas {self.queries_data['metadata']['total_queries']} consultas")
+            return True
+        except FileNotFoundError:
+            print(f"❌ Arquivo não encontrado: {file_path}")
+            print("💡 Certifique-se de que o arquivo queries.json está na pasta colecao/")
+            return False
+        except json.JSONDecodeError as e:
+            print(f"❌ Erro ao decodificar JSON: {str(e)}")
+            return False
+        except Exception as e:
+            print(f"❌ Erro inesperado ao carregar arquivo: {str(e)}")
+            return False
+    
     def search_query(self, query, size=100, use_expansion=True):
         """Executa busca para uma query específica"""
         try:
@@ -31,20 +44,28 @@ class MAPCalculatorFull:
                     "query": query,
                     "field": "all",
                     "size": size,
-                    "use_expansion": use_expansion
+                    "use_local_expansion": use_expansion
                 },
                 headers={"Content-Type": "application/json"},
                 timeout=30
             )
             
             if response.status_code == 200:
-                return response.json()
+                data = response.json()
+                if use_expansion and 'expansion_info' in data:
+                    print(f"   🔍 Expansão aplicada: {data['expansion_info'].get('local_expansion_terms', [])}")
+                elif use_expansion:
+                    print(f"   ⚠️  Expansão solicitada mas não aplicada")
+                return data
             else:
-                print(f"❌ Erro na busca: {response.status_code}")
+                print(f"❌ Erro na busca: {response.status_code} - {response.text}")
                 return None
                 
         except requests.exceptions.ConnectionError:
-            print("❌ Erro: Não foi possível conectar ao servidor")
+            print(f"❌ Erro: Não foi possível conectar ao servidor em {self.base_url}")
+            return None
+        except requests.exceptions.Timeout:
+            print("❌ Timeout na requisição")
             return None
         except Exception as e:
             print(f"❌ Erro inesperado: {str(e)}")
@@ -146,6 +167,16 @@ class MAPCalculatorFull:
                 precision_at_10_sum += precision_at_10
                 successful_queries += 1
                 
+                # Debug: mostrar resultados para as primeiras queries
+                if i <= 3:
+                    print(f"   📋 Query {i} ({expansion_text}):")
+                    print(f"      Query: '{query_text[:50]}...'")
+                    print(f"      Resultados: {len(search_results.get('results', []))}")
+                    print(f"      AP: {ap:.4f}, P@10: {precision_at_10:.4f}")
+                    if use_expansion and 'expansion_info' in search_results:
+                        terms = search_results['expansion_info'].get('local_expansion_terms', [])
+                        print(f"      Termos expandidos: {terms}")
+                
                 # Guardar resultados (apenas para queries com AP > 0 para economizar espaço)
                 if ap > 0:
                     results_by_query.append({
@@ -181,6 +212,9 @@ class MAPCalculatorFull:
         print(f"   MAP: {map_score:.4f}")
         print(f"   Mean Precision@10: {mean_precision_at_10:.4f}")
         
+        # Criar diretório se não existir
+        os.makedirs("analysers/results", exist_ok=True)
+        
         # Salvar resultados detalhados
         detailed_results = {
             "metadata": {
@@ -197,18 +231,31 @@ class MAPCalculatorFull:
         }
         
         filename = f"analysers/results/map_full_results{expansion_suffix}.json"
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(detailed_results, f, indent=2, ensure_ascii=False)
-        
-        print(f"💾 Resultados salvos em {filename}")
+        try:
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(detailed_results, f, indent=2, ensure_ascii=False)
+            print(f"💾 Resultados salvos em {filename}")
+        except Exception as e:
+            print(f"⚠️  Aviso: Não foi possível salvar resultados: {str(e)}")
         
         return map_score
 
 def main():
     print("🚀 Iniciando cálculo de MAP...")
     
+    # Verificar se estamos em ambiente Docker
+    if os.path.exists('/.dockerenv'):
+        print("🐳 Executando em ambiente Docker")
+        # Para Docker na mesma rede, usar localhost
+        base_url = "http://localhost:5000"
+    else:
+        print("💻 Executando em ambiente local")
+        base_url = "http://localhost:5000"
+    
+    print(f"🔗 Conectando com aplicação em: {base_url}")
+    
     # Criar instância do analisador
-    analyser = MAPCalculatorFull()
+    analyser = MAPCalculatorFull(base_url=base_url)
     
     # Carregar dados das consultas
     if not analyser.load_queries_json():

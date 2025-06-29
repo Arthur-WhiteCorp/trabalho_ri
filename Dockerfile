@@ -10,6 +10,9 @@ COPY requirements.txt .
 # Instala as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Download dos recursos NLTK necessários
+RUN python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('punkt_tab')"
+
 # Copia o restante do código
 COPY . .
 

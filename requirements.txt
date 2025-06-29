@@ -1,6 +1,6 @@
 numpy<2.0
 pandas
-elasticsearch
+elasticsearch==8.11.0
 pyarrow
 flask
 requests

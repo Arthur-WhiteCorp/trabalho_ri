@@ -212,6 +212,9 @@ def search():
         return jsonify(response_data)
         
     except Exception as e:
+        import traceback
+        print(f"Erro detalhado na busca: {str(e)}")
+        print(f"Traceback: {traceback.format_exc()}")
         return jsonify({'error': f'Erro interno: {str(e)}'}), 500
 
 @app.route('/stats')
