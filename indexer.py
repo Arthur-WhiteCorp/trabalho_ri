@@ -36,13 +36,8 @@ class Indexer:
 
     def initialize_elasticsearch(self):
         try:
-            # Verificar se estamos em ambiente Docker
-            if os.path.exists('/.dockerenv'):
-                # Para Docker no Linux, usar o IP da bridge
-                es_url = "http://172.17.0.1:9200"
-            else:
-                # Para ambiente local
-                es_url = "http://localhost:9200"
+            # Usar variável de ambiente se disponível, senão usar fallback
+            es_url = os.getenv('ELASTICSEARCH_URL', 'http://localhost:9200')
             
             es = Elasticsearch(
                 es_url,

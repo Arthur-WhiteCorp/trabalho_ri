@@ -1,0 +1,51 @@
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - elastic
+
+  indexador:
+    build: .
+    container_name: indexador
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./colecao:/app/colecao
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    networks:
+      - elastic
+    command: python main.py
+
+  flask-app:
+    build: .
+    container_name: flask-app
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./colecao:/app/colecao
+      - ./analysers:/app/analysers
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    networks:
+      - elastic
+    command: python app.py
+
+volumes:
+  elasticsearch_data:
+
+networks:
+  elastic:
+    driver: bridge
