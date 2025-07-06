@@ -19,6 +19,9 @@ start: build app
 map:
 	docker run --rm -it -v $(PWD)/colecao:/app/colecao -v $(PWD)/analysers:/app/analysers --network container:flask-app indexador-parquet python analysers/calculate_map_json.py
 
+ndcg:
+	docker run --rm -it -v $(PWD)/colecao:/app/colecao -v $(PWD)/analysers:/app/analysers --network container:flask-app indexador-parquet python analysers/calculate_ndcg_json.py
+
 # Roda tudo: Flask + MAP em sequência
 map-full: build
 	@echo "🚀 Iniciando aplicação Flask..."

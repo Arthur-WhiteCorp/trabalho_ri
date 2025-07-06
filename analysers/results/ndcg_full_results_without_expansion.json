@@ -1,0 +1,2708 @@
+{
+  "metadata": {
+    "mean_ndcg": {
+      "ndcg_at_1": 0.7094861660079053,
+      "ndcg_at_3": 0.7106627543290397,
+      "ndcg_at_5": 0.7250380601104028,
+      "ndcg_at_10": 0.7340588547954662
+    },
+    "total_queries": 253,
+    "successful_queries": 253,
+    "total_time_seconds": 33.728095054626465,
+    "use_expansion": false,
+    "expansion_type": "local_only",
+    "k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "timestamp": "2025-07-06 11:33:49"
+  },
+  "results_by_query": [
+    {
+      "query": "A ameaça não se configura apenas com palavras vagas ou desprovidas de contexto, sendo imprescindível que haja a demonstração de que a vítima estava diante de um perigo concreto de mal injusto e grave",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.15969697161989949,
+        "ndcg_at_5": 0.4316575456975214,
+        "ndcg_at_10": 0.30745267951442545
+      },
+      "total_relevant": 12,
+      "total_documents": 16
+    },
+    {
+      "query": "ação para tutela da saúde mental",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.7860137352654724,
+        "ndcg_at_10": 0.5884674004369673
+      },
+      "total_relevant": 13,
+      "total_documents": 17
+    },
+    {
+      "query": "acordo extrajudicial interrupção prescrição",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 5,
+      "total_documents": 17
+    },
+    {
+      "query": "adicional de insalubridade",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.5701406500739014,
+        "ndcg_at_5": 0.547158235660828,
+        "ndcg_at_10": 0.6064219068527034
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "advogado que atuou na fase de conhecimento até o trânsito em julgado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8909917927337877
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "agravo de instrumento bloqueio cnh e passaporte",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.24261427755816128,
+        "ndcg_at_10": 0.29442477563212727
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "alteração da CDA após propositura da ação de execução fiscal",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.8930068676327362,
+        "ndcg_at_10": 0.9305687780632227
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "anulação do auto de infração e extinção da execução",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.8087436993719216
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "arbitramento das custas processuais em montante desproporcional",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 1,
+      "total_documents": 18
+    },
+    {
+      "query": "bloqueio de proventos de natureza alimentar",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.6608397947263839,
+        "ndcg_at_10": 0.4982710309705437
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "cabimento de honorários advocatícios na execução de alimentos",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.4468535299918563,
+        "ndcg_at_10": 0.6410457898283652
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "cancelamento de voo trecho terrestre",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "clemência",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.8899541168509599
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "cobrança de multa em cumprimento de sentença. súmula 410 do stj",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.8099531166420328,
+        "ndcg_at_5": 0.8550077055393716,
+        "ndcg_at_10": 0.8347727710785315
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "contestação  cobrança abusiva",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.8532721558012798
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "contrato de consórcio tutela antecipada prática e cláusula abusivas",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.9269658250786468,
+        "ndcg_at_10": 0.8545412002613597
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "contrato está ilegível",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8522250343227415
+      },
+      "total_relevant": 15,
+      "total_documents": 18
+    },
+    {
+      "query": "contrato leonino",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.857554091468446
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "defesa tribunal de contas",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.638383512579045,
+        "ndcg_at_5": 0.6083264271176694,
+        "ndcg_at_10": 0.6290053738846
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "doença, exercito, musico, perda auditiva",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.5773584151532217,
+        "ndcg_at_10": 0.6498534350056142
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "duração de inquérito policial",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.6900468833579672,
+        "ndcg_at_5": 0.7635277529255671,
+        "ndcg_at_10": 0.7757675328550585
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "engenheiro agrônomo da ascar/emater",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 15,
+      "total_documents": 15
+    },
+    {
+      "query": "erro material na contagem do tempo de contribuição",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.6164336326286644,
+        "ndcg_at_10": 0.7510916729774053
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "escoliose dorso-lombar",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.934397461243829,
+        "ndcg_at_10": 0.8178102956254405
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "exame dna laboratório indicado pelas partes exame pago",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.26582598262939583,
+        "ndcg_at_5": 0.49479602112000737,
+        "ndcg_at_10": 0.5716369626195555
+      },
+      "total_relevant": 3,
+      "total_documents": 18
+    },
+    {
+      "query": "exceção de pré-executividade",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.7232329748419101,
+        "ndcg_at_5": 0.7833471457646615,
+        "ndcg_at_10": 0.8271278366352046
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "execução bloqueio de cnh tjgo",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.680606056760201,
+        "ndcg_at_5": 0.7467366458934469,
+        "ndcg_at_10": 0.7627039242193164
+      },
+      "total_relevant": 14,
+      "total_documents": 16
+    },
+    {
+      "query": "execução de honorários em embargos à execução fiscal",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.6164336326286644,
+        "ndcg_at_10": 0.6848374495230163
+      },
+      "total_relevant": 12,
+      "total_documents": 19
+    },
+    {
+      "query": "falta de anuência do cônjuge",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.7860137352654724,
+        "ndcg_at_10": 0.8611375561264454
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "imóvel mutuado propriedade consolidada pela cef",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "indeferimento do pedido de devolução de prazo para interposição de recurso",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.7691415988388896,
+        "ndcg_at_10": 0.8501886940559292
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "inexistência de inventário e partilha posse",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.3354350434265105,
+        "ndcg_at_5": 0.45407562676326696,
+        "ndcg_at_10": 0.6490937736705547
+      },
+      "total_relevant": 11,
+      "total_documents": 19
+    },
+    {
+      "query": "inss benefício suspenso aposentadoria por fraude",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.6843515475204855,
+        "ndcg_at_10": 0.6765170577926972
+      },
+      "total_relevant": 13,
+      "total_documents": 14
+    },
+    {
+      "query": "invalidade dos controles de jornada",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "juizado especial extincao por ausencia de bens",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.2960819109658652,
+        "ndcg_at_5": 0.21398626473452756,
+        "ndcg_at_10": 0.20248323207250624
+      },
+      "total_relevant": 13,
+      "total_documents": 19
+    },
+    {
+      "query": "laudo particular e perícia médica  RI auxilio doença continuidade",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.6164336326286644,
+        "ndcg_at_10": 0.6832489502818222
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "litisconsórcio necessário, passivo. aditamento",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.7846170207230129
+      },
+      "total_relevant": 16,
+      "total_documents": 19
+    },
+    {
+      "query": "locação não residencial",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8701249883466593
+      },
+      "total_relevant": 17,
+      "total_documents": 19
+    },
+    {
+      "query": "mandado de segurança morosidade inss",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.772837825180752
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "motorista de caminhão. enquadramento por categoria profissional",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "nos termos da súmula 287 do stj, a taxa básica financeira",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9652843890316114
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "o recurso ordinario e cabivel contra decisão denegatoria de mandado de segurança",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.5922216874835864,
+        "ndcg_at_10": 0.5882440201213512
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "penhora salário mínimo existencial",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9363792118010483
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "prática de crime equiparado a hediondo",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "princípio da função social dos contratos",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.639945385422766,
+        "ndcg_at_10": 0.6243301345792677
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "qualidade de segurado acidente sofrido no primeiro dia de trabalho",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.5209090851403014,
+        "ndcg_at_5": 0.5221293293344146,
+        "ndcg_at_10": 0.6027249733057386
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "REsp 1216526 RS 2010/0190689-0",
+      "ndcg_results": {
+        "ndcg_at_1": 0.3333333333333333,
+        "ndcg_at_3": 0.5158474921363962,
+        "ndcg_at_5": 0.5958337834156117,
+        "ndcg_at_10": 0.7590530824830191
+      },
+      "total_relevant": 12,
+      "total_documents": 14
+    },
+    {
+      "query": "responsabilidade manutenção do imóvel locado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.8899541168509599
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "retardo mental moderado Estado e Municipio",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8878186477210572,
+        "ndcg_at_10": 0.7929854850478898
+      },
+      "total_relevant": 15,
+      "total_documents": 17
+    },
+    {
+      "query": "súmula 612/stj",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.7149296749630493,
+        "ndcg_at_5": 0.7825115583090574,
+        "ndcg_at_10": 0.7927956546284954
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "Súmula nº 678 do supremo tribunal federal",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.16520887526157216,
+        "ndcg_at_10": 0.3687029428270946
+      },
+      "total_relevant": 11,
+      "total_documents": 12
+    },
+    {
+      "query": "tabela de honorários de advogado dativo",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "tentativa de retardar o cumprimento da decisão judicial",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.09797563950575583,
+        "ndcg_at_10": 0.2463143389865207
+      },
+      "total_relevant": 12,
+      "total_documents": 18
+    },
+    {
+      "query": "ação de indenização por danos morais e materiais c.c. alimentos",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.16958010263680806,
+        "ndcg_at_10": 0.20626588994627673
+      },
+      "total_relevant": 8,
+      "total_documents": 17
+    },
+    {
+      "query": "adicionais de periculosidade e por tempo de serviço",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.914856882358379
+      },
+      "total_relevant": 13,
+      "total_documents": 13
+    },
+    {
+      "query": "Afastando a Compensação da Súmula 306 do STJ",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.4298593499260986,
+        "ndcg_at_5": 0.5025783342926474,
+        "ndcg_at_10": 0.6498614305816627
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "agravo de instrumento busca e apreensão de menor preparo",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8883242791095457
+      },
+      "total_relevant": 13,
+      "total_documents": 15
+    },
+    {
+      "query": "agravo de petição contra apreensão passaporte",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8630152897016883
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "amassado na porta da geladeira",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.584790051318404,
+        "ndcg_at_10": 0.7225789818170407
+      },
+      "total_relevant": 13,
+      "total_documents": 17
+    },
+    {
+      "query": "apelação e oposição e má-fé",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7346393630113782,
+        "ndcg_at_5": 0.6621484664716257,
+        "ndcg_at_10": 0.6856646807679111
+      },
+      "total_relevant": 13,
+      "total_documents": 18
+    },
+    {
+      "query": "aposentadoria por idade de marisqueira, comprovação de trabalho em regime de economia familiar com filha solteira",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.6131471927654584,
+        "ndcg_at_5": 0.8772153153380493,
+        "ndcg_at_10": 0.8772153153380493
+      },
+      "total_relevant": 2,
+      "total_documents": 4
+    },
+    {
+      "query": "aposentadoria por idade reafirmação da der",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "art 106 cpc",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8539316501572937,
+        "ndcg_at_10": 0.826813366651774
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "Art. 10 C/C art. 15; NCPC",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8670870086853021,
+        "ndcg_at_5": 0.8670870086853021,
+        "ndcg_at_10": 0.8670870086853021
+      },
+      "total_relevant": 3,
+      "total_documents": 13
+    },
+    {
+      "query": "Art. 22 da Lei 12965/14",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.6887676151990412,
+        "ndcg_at_10": 0.5571717166468241
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "art. 489 embargos declaração",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8701249883466593
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "art. 65 da lcp. absolvição",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.8929352005733612,
+        "ndcg_at_10": 0.7862056913367994
+      },
+      "total_relevant": 7,
+      "total_documents": 14
+    },
+    {
+      "query": "artigo 60 contra artigo 611-a",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.933745776545611
+      },
+      "total_relevant": 17,
+      "total_documents": 19
+    },
+    {
+      "query": "associação irregularidade constituicao",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.31939394323979897,
+        "ndcg_at_5": 0.3623379437392863,
+        "ndcg_at_10": 0.5311801798103216
+      },
+      "total_relevant": 5,
+      "total_documents": 19
+    },
+    {
+      "query": "astreintes facebook",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.5865984075284455,
+        "ndcg_at_5": 0.7012236839470684,
+        "ndcg_at_10": 0.7424938263529737
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "atendimento em tempo integral por enfermeiro",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "AUSÊNCIA DE COMPROVAÇÃO DA CONTRATAÇÃO.",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9216017310213247
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "auxiliar local de missão diplomática ou repartição consular",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.6199062332840657,
+        "ndcg_at_5": 0.7100154110787432,
+        "ndcg_at_10": 0.771884314090757
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "banco dano moral tjpe 2024",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.6745711375739728
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "benefício assistencial renda",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.4298593499260986,
+        "ndcg_at_5": 0.5650231166181148,
+        "ndcg_at_10": 0.6759504113186888
+      },
+      "total_relevant": 15,
+      "total_documents": 15
+    },
+    {
+      "query": "bloqueio indevido de valores em conta bancária",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9363792118010483
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "cargo em comissao. ferias",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.48522855511632257,
+        "ndcg_at_10": 0.3466905247671068
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "cef. indenização por dano moral",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.2960819109658652,
+        "ndcg_at_5": 0.21398626473452756,
+        "ndcg_at_10": 0.42049964660493067
+      },
+      "total_relevant": 12,
+      "total_documents": 17
+    },
+    {
+      "query": "citação decretada nula não pode interromper o prazo prescricional",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.8581437227514841
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "comodato verbal ¿ falta de prova",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.6608397947263839,
+        "ndcg_at_10": 0.6709000264357075
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "consulta por telefone",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.9269658250786468,
+        "ndcg_at_10": 0.8561027195190289
+      },
+      "total_relevant": 9,
+      "total_documents": 12
+    },
+    {
+      "query": "contrato honorarios ação alimentos",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.5147714448836774,
+        "ndcg_at_10": 0.38391202314388534
+      },
+      "total_relevant": 8,
+      "total_documents": 18
+    },
+    {
+      "query": "cpc - art. 1018",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8539316501572937,
+        "ndcg_at_10": 0.7753366239771086
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "crime omissivo impróprio",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9321572773044168
+      },
+      "total_relevant": 15,
+      "total_documents": 15
+    },
+    {
+      "query": "dano moral clt",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.6992148198508501,
+        "ndcg_at_10": 0.5894280199323518
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "daratumumab",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "da vulnerabilidade do cliente vitima de golpe banco",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7346393630113782,
+        "ndcg_at_5": 0.8082168163143322,
+        "ndcg_at_10": 0.8408302255203141
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "dedução da contribuição previdenciária antes da aplicação dos juros",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.6608397947263839,
+        "ndcg_at_10": 0.7799082337019199
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "defesa crm",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.30078518014914984,
+        "ndcg_at_10": 0.5516485659336006
+      },
+      "total_relevant": 8,
+      "total_documents": 14
+    },
+    {
+      "query": "demissão membro do CIPA dano moral",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 13,
+      "total_documents": 13
+    },
+    {
+      "query": "desapropriaçao 80% antes da sentença e 20% após o transito em julgado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.7227265726449519,
+        "ndcg_at_10": 0.6020521034564038
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "descumprimento de acórdão anterior pelo juiz a quo",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9363792118010483
+      },
+      "total_relevant": 14,
+      "total_documents": 19
+    },
+    {
+      "query": "desistência antes recebimento desnecessidade anuência",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.914856882358379
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "DESPEJO capitalização EXTINÇÃO DA GARANTIA",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9668728882728055
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "dificuldade financeira do alimentante",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.7849818707050383
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "direcionamento licitação exigência técnica MINISTÉRIO PÚBLICO",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9250522239667978
+      },
+      "total_relevant": 14,
+      "total_documents": 16
+    },
+    {
+      "query": "divulgação indevida de dados pessoais",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 15,
+      "total_documents": 15
+    },
+    {
+      "query": "embargos de declaração estupro",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.6608397947263839,
+        "ndcg_at_10": 0.7799082337019199
+      },
+      "total_relevant": 17,
+      "total_documents": 19
+    },
+    {
+      "query": "emenda parlamentar",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.7232329748419101,
+        "ndcg_at_5": 0.7833471457646615,
+        "ndcg_at_10": 0.9080375735745105
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "empréstimo de dinheiro entre pessoas físicas",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8623482045275422
+      },
+      "total_relevant": 15,
+      "total_documents": 19
+    },
+    {
+      "query": "exame de reclassificação",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 14,
+      "total_documents": 17
+    },
+    {
+      "query": "extinção da fiança",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "fazenda pública. direito indisponível",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.2960819109658652,
+        "ndcg_at_5": 0.4912596920895758,
+        "ndcg_at_10": 0.6698623505528798
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "fracionamento com área de 250m2",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.8099531166420328,
+        "ndcg_at_5": 0.8550077055393716,
+        "ndcg_at_10": 0.9008636626471189
+      },
+      "total_relevant": 17,
+      "total_documents": 19
+    },
+    {
+      "query": "honorários advocatícios estipulados no contrato de locação",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8539316501572937,
+        "ndcg_at_10": 0.8318477135310893
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "impossibilidade de denunciação à lide",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.7618017901203944,
+        "ndcg_at_10": 0.7418530684847136
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "impossibilidade legal",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.7403521653031849,
+        "ndcg_at_10": 0.7118756224072021
+      },
+      "total_relevant": 15,
+      "total_documents": 17
+    },
+    {
+      "query": "impugnação de voto",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.5087403079104241,
+        "ndcg_at_10": 0.4797600873428668
+      },
+      "total_relevant": 6,
+      "total_documents": 11
+    },
+    {
+      "query": "indeferimento da inicial ao argumento de litispendência",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.5878056198050307,
+        "ndcg_at_10": 0.6520132333932025
+      },
+      "total_relevant": 15,
+      "total_documents": 18
+    },
+    {
+      "query": "inexeqüibilidade do título judicial",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.7065836017263629
+      },
+      "total_relevant": 15,
+      "total_documents": 16
+    },
+    {
+      "query": "inobservância do interstício mínimo entre a notificação e a audiência",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "intimacao do facebook servicos online do brasil",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.48522855511632257,
+        "ndcg_at_10": 0.5828219326676972
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "intimação por edital para sessão plenária",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.6578242262397573,
+        "ndcg_at_10": 0.8185371309748202
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "intimação prévia para o julgamento antecipado da lide",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.30063051302795313,
+        "ndcg_at_5": 0.3314377972870635,
+        "ndcg_at_10": 0.35225906326661305
+      },
+      "total_relevant": 10,
+      "total_documents": 17
+    },
+    {
+      "query": "juntada de documentos com as alegações finais",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.11731968150568911,
+        "ndcg_at_5": 0.387483371574543,
+        "ndcg_at_10": 0.4858440996467346
+      },
+      "total_relevant": 14,
+      "total_documents": 14
+    },
+    {
+      "query": "juros abusivos perfil de risco",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9681896059005243
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "laudo ambiental não configura insalubridade",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.7637012590219477,
+        "ndcg_at_10": 0.8201730231310354
+      },
+      "total_relevant": 15,
+      "total_documents": 19
+    },
+    {
+      "query": "Lei nº 12.506/2011 não se aplica a caso de pedido de demissão",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7346393630113782,
+        "ndcg_at_5": 0.7947520282959947,
+        "ndcg_at_10": 0.8909634757787067
+      },
+      "total_relevant": 15,
+      "total_documents": 18
+    },
+    {
+      "query": "Majoração de alimentos sem provas",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.6261806449294969,
+        "ndcg_at_10": 0.6731033606389685
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "MANDADO DE SEGURANÇA. PREVIDENCIÁRIO. PEDIDO DE CONCESSÃO DE BENEFÍCIO. DEMORA NA analise de marcação de pericia médica",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.2653606369886217,
+        "ndcg_at_5": 0.2573857224418387,
+        "ndcg_at_10": 0.47366279356718816
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "manifestação sobre acordo extrajudicial",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.8930068676327362,
+        "ndcg_at_10": 0.8270009939480268
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "modelo de agravo de instrumento penhora de salário",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.4468535299918563,
+        "ndcg_at_10": 0.507354988810104
+      },
+      "total_relevant": 13,
+      "total_documents": 13
+    },
+    {
+      "query": "monitoria, sentença",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.13120507751234178,
+        "ndcg_at_10": 0.08514311764162098
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "morte do contratante",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.7860137352654724,
+        "ndcg_at_10": 0.8611375561264454
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "namoro e noivado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9016636008326597
+      },
+      "total_relevant": 15,
+      "total_documents": 15
+    },
+    {
+      "query": "não apreensão da arma de fogo e ausência de exame pericial",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.5147714448836774,
+        "ndcg_at_10": 0.6172771466367859
+      },
+      "total_relevant": 15,
+      "total_documents": 18
+    },
+    {
+      "query": "não comunicação da interposição do agravo conflito decisão primeiro grau",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.36121211352040195,
+        "ndcg_at_5": 0.28642306264840484,
+        "ndcg_at_10": 0.329873323261842
+      },
+      "total_relevant": 6,
+      "total_documents": 19
+    },
+    {
+      "query": "necessidade de uso ininterrupto de aparelho respiratório",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 15,
+      "total_documents": 18
+    },
+    {
+      "query": "NECESSIDDE DE PRÉVIA INSTAURAÇÃO DE PROCEDIMENTO ADMINISTRATIVO. INTELIGÊNCIA DO ART. 148 DO CTN",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.8099531166420328,
+        "ndcg_at_5": 0.8550077055393716,
+        "ndcg_at_10": 0.9361767385157805
+      },
+      "total_relevant": 13,
+      "total_documents": 13
+    },
+    {
+      "query": "negligência da empresa de energia elétrica perigo de vida",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.38268031849431083,
+        "ndcg_at_5": 0.4808124874377669,
+        "ndcg_at_10": 0.4766518949038286
+      },
+      "total_relevant": 13,
+      "total_documents": 19
+    },
+    {
+      "query": "paciente expulso de clínica psiquiátrica",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.7234267649959281,
+        "ndcg_at_10": 0.8897286598955366
+      },
+      "total_relevant": 6,
+      "total_documents": 18
+    },
+    {
+      "query": "parcelado facil bradesco",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "partilha de bens imóveis não registrados",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9032521000738538
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "pedido de distribuição por dependência em razão de conexão",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "perda parcial de movimentos dos dedos erro médico",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.7742173914224189,
+        "ndcg_at_10": 0.7763070521690055
+      },
+      "total_relevant": 10,
+      "total_documents": 19
+    },
+    {
+      "query": "plano saúde intransmissibilidade morte",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.933745776545611
+      },
+      "total_relevant": 15,
+      "total_documents": 19
+    },
+    {
+      "query": "prisão preventiva reu pronunciado analise de pedido de liberdade",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8603818544462509
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "produtos comercializados sem registro na anvisa",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.8099531166420328,
+        "ndcg_at_5": 0.7925629232139043,
+        "ndcg_at_10": 0.766203415534958
+      },
+      "total_relevant": 15,
+      "total_documents": 19
+    },
+    {
+      "query": "Reclamatória Trabalhista - Rescisão Indireta",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9321572773044168
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "replica a contestação aposentadoria por idade",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.30078518014914984,
+        "ndcg_at_10": 0.34695119186869644
+      },
+      "total_relevant": 12,
+      "total_documents": 18
+    },
+    {
+      "query": "rescisão indireta magazine luiza",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9178451036103696
+      },
+      "total_relevant": 13,
+      "total_documents": 18
+    },
+    {
+      "query": "Rescisão Indireta pela Recuperação Judicial",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.15969697161989949,
+        "ndcg_at_5": 0.3225829560647882,
+        "ndcg_at_10": 0.29588951243386047
+      },
+      "total_relevant": 6,
+      "total_documents": 19
+    },
+    {
+      "query": "responsabilidade solidária da concessionária e da instituição financeira cobrança indevidaq",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.5143371794949736,
+        "ndcg_at_10": 0.5143371794949736
+      },
+      "total_relevant": 4,
+      "total_documents": 5
+    },
+    {
+      "query": "revogação de substabelecimento",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.7860137352654724,
+        "ndcg_at_10": 0.7559632399276095
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "subtração de valor apreendido com assaltante",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.38364913903790027,
+        "ndcg_at_10": 0.38364913903790027
+      },
+      "total_relevant": 3,
+      "total_documents": 17
+    },
+    {
+      "query": "Súmula 410 - juizado - inaplicabilidade",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "técnico de radiologia jornada",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "Wagner Rodrigues nonoai 2014",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.6096199500078984,
+        "ndcg_at_10": 0.7327711443782634
+      },
+      "total_relevant": 4,
+      "total_documents": 16
+    },
+    {
+      "query": "abordagem de ônibus por policiais militares",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.6379365213265478,
+        "ndcg_at_10": 0.6459761879790495
+      },
+      "total_relevant": 12,
+      "total_documents": 19
+    },
+    {
+      "query": "ação de curatela autismo",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "ação de nulidade de inventário/partilha extrajudicial",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "algemas escrito nulidade da prisão",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "alimentos provisórios tutela de urgência",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "alteração fator de multiplicação. energia. alteração",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9633246225228971
+      },
+      "total_relevant": 9,
+      "total_documents": 18
+    },
+    {
+      "query": "andre luis lechner",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.6309297535714575,
+        "ndcg_at_5": 0.6309297535714575,
+        "ndcg_at_10": 0.6309297535714575
+      },
+      "total_relevant": 1,
+      "total_documents": 19
+    },
+    {
+      "query": "apelação pedido de efeito suspensivo tutela concedida tjsp 2024",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.914856882358379
+      },
+      "total_relevant": 12,
+      "total_documents": 19
+    },
+    {
+      "query": "aplicação da fração máxima da tentativa",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "apreensão de passaportes como medida acautelatória",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.6809047493604335
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "art. 174 ctn . nulidade da cda PRESCRIÇÃO",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9266360779006401
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "art. 27 da lei 13146/15",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.30078518014914984,
+        "ndcg_at_10": 0.3321737110889728
+      },
+      "total_relevant": 14,
+      "total_documents": 18
+    },
+    {
+      "query": "art. 840 do código civil",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9652843890316114
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "assinatura do ar por terceiro",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "ausência de apresentação de estudo prévio de impacto orçamentário",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.5679726963447116,
+        "ndcg_at_5": 0.5953379117551574,
+        "ndcg_at_10": 0.6989211950460075
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "ausência de demonstração da necessidade de prisão preventiva",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.7870179323468908
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "ausência de pagamento no prazo de 15 dias",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.915209948681596,
+        "ndcg_at_10": 0.825985501261211
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "autarquia municipal de trânsito de fortaleza amc",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "auxílio-acidente avc",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9305687780632227
+      },
+      "total_relevant": 16,
+      "total_documents": 19
+    },
+    {
+      "query": "avaria dano causado mercadoria transporte",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "baixa do gravame responsabilidade da instituição financeira TJGO",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "bloqueio valor fase cumprimento sentenca",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.7860137352654724,
+        "ndcg_at_10": 0.725452110735279
+      },
+      "total_relevant": 17,
+      "total_documents": 20
+    },
+    {
+      "query": "caracterizada ma fe plano saude",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.09797563950575583,
+        "ndcg_at_10": 0.2664951260255002
+      },
+      "total_relevant": 9,
+      "total_documents": 17
+    },
+    {
+      "query": "CID r042",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.5531464700081437,
+        "ndcg_at_10": 0.3589542101716347
+      },
+      "total_relevant": 13,
+      "total_documents": 13
+    },
+    {
+      "query": "cirurgia de mohs",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "citação de todos os invasores",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "compra e venda com cláusula de recompra",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.764817358607021,
+        "ndcg_at_10": 0.7750563118136171
+      },
+      "total_relevant": 16,
+      "total_documents": 19
+    },
+    {
+      "query": "configuração da relação de consumo",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.5,
+        "ndcg_at_5": 0.565602538756171,
+        "ndcg_at_10": 0.7115422726286154
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "consignação em pagamento. credor",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.6608397947263839,
+        "ndcg_at_10": 0.7104770117651426
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "contestação apresentada antes da audiência de justificação",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.6917831836856677,
+        "ndcg_at_10": 0.7945315762020058
+      },
+      "total_relevant": 16,
+      "total_documents": 19
+    },
+    {
+      "query": "contestação imissão de posse. enel. terreno.",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.78180487222265
+      },
+      "total_relevant": 10,
+      "total_documents": 17
+    },
+    {
+      "query": "contrato de seguro de veículo, aplicação do código de defesa do consumidor, danos morais",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.5,
+        "ndcg_at_5": 0.565602538756171,
+        "ndcg_at_10": 0.5969252290260091
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "cuidadora de enfermo e doméstica acúmulo de função",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9329289372340748
+      },
+      "total_relevant": 11,
+      "total_documents": 17
+    },
+    {
+      "query": "dano moral por ricochete acidente de trabalho",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.915209948681596,
+        "ndcg_at_10": 0.94497705842548
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "data da sentença e data de sua publicação",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8322824782867448,
+        "ndcg_at_5": 0.6837003453466949,
+        "ndcg_at_10": 0.6858451099454518
+      },
+      "total_relevant": 9,
+      "total_documents": 18
+    },
+    {
+      "query": "defesa dano moral trabalhista",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.6548086577531307,
+        "ndcg_at_10": 0.49435723575344825
+      },
+      "total_relevant": 13,
+      "total_documents": 17
+    },
+    {
+      "query": "defesa de grupo econômico",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.6608397947263839,
+        "ndcg_at_10": 0.7136540102475308
+      },
+      "total_relevant": 12,
+      "total_documents": 18
+    },
+    {
+      "query": "defesa do artigo 218 - A do cp",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0,
+        "ndcg_at_10": 0.3010299956639812
+      },
+      "total_relevant": 1,
+      "total_documents": 15
+    },
+    {
+      "query": "desbloqueio de margem consignável",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.764817358607021,
+        "ndcg_at_10": 0.8107005969804694
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "desistência do processo e custas",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.8687949224876582,
+        "ndcg_at_10": 0.7778721720600673
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "deve ser considerado amostra grátis",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.6480409554829326,
+        "ndcg_at_5": 0.680027307288617,
+        "ndcg_at_10": 0.6836350499740986
+      },
+      "total_relevant": 15,
+      "total_documents": 18
+    },
+    {
+      "query": "dissolução parcial da sociedade data base",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 15,
+      "total_documents": 17
+    },
+    {
+      "query": "embarque de menor desacompanhado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9652843890316114
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "é ônus da reclamada trazer ao processo todos os relatórios de vendas e a documentação necessária à comprovação do correto pagamento das comissoes",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.8930068676327362,
+        "ndcg_at_10": 0.7588684567965223
+      },
+      "total_relevant": 16,
+      "total_documents": 17
+    },
+    {
+      "query": "estado de perigo",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "excesso de consumo decorrente de suposto vazamento",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7346393630113782,
+        "ndcg_at_5": 0.8082168163143322,
+        "ndcg_at_10": 0.8755458364887027
+      },
+      "total_relevant": 17,
+      "total_documents": 19
+    },
+    {
+      "query": "execução fiscal impenhorabilidade de salário ausência de comprovação",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.8930068676327362,
+        "ndcg_at_10": 0.8958531670948341
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "execução fiscal  por desconto em folha tj pr",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.5307212739772434,
+        "ndcg_at_5": 0.38356636737133565,
+        "ndcg_at_10": 0.46047467141697823
+      },
+      "total_relevant": 8,
+      "total_documents": 19
+    },
+    {
+      "query": "Fixação danos morais  R$1000,00",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.7234267649959281,
+        "ndcg_at_10": 0.7150695369704558
+      },
+      "total_relevant": 18,
+      "total_documents": 19
+    },
+    {
+      "query": "Geraldo Antônio da Mota idema 2024",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.8930068676327362,
+        "ndcg_at_10": 0.9305687780632227
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "giuliana santos santana",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0,
+        "ndcg_at_10": 0.3562071871080222
+      },
+      "total_relevant": 1,
+      "total_documents": 19
+    },
+    {
+      "query": "guarda municipal em estágio probatório",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 15,
+      "total_documents": 19
+    },
+    {
+      "query": "guarda tia FAMILIA EXTENSA tjce",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.4339857073157784,
+        "ndcg_at_10": 0.5979344021298778
+      },
+      "total_relevant": 6,
+      "total_documents": 14
+    },
+    {
+      "query": "habeas corpus manifestação do mp antes da liminar",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.680606056760201,
+        "ndcg_at_5": 0.7578355960204244,
+        "ndcg_at_10": 0.7111155189439525
+      },
+      "total_relevant": 11,
+      "total_documents": 18
+    },
+    {
+      "query": "hemisul",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "honorarios advocaticios devidos pela seguradora",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.14606834984270645,
+        "ndcg_at_10": 0.3822360008387524
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "impossibilidade de impetração simultânea de mandado de segurança",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.8930068676327362,
+        "ndcg_at_10": 0.89798897246084
+      },
+      "total_relevant": 9,
+      "total_documents": 19
+    },
+    {
+      "query": "interrogatório sem a presença de advogado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "ISS sobre PIS e COFINS",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.915209948681596,
+        "ndcg_at_10": 0.94497705842548
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "jurisprudencia tjce pensao alimenticia a filho menor",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.3391602052736161,
+        "ndcg_at_10": 0.22009176629808017
+      },
+      "total_relevant": 13,
+      "total_documents": 18
+    },
+    {
+      "query": "laudo prazo impugnação art. 872, § 2",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.7765732350040719,
+        "ndcg_at_10": 0.7914774073259112
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "lavratura de termo circunstanciado por exercício ilegal de profissão",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.8954753162547368
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "manipulação dos cartões ponto rescisao indireta",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9016636008326597
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "ministério reconhece a prescrição retroativa antes das contrarrazões",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "mitigação do princípio da adstrição nas ações de alimentos",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "modelo usucapião ordinário judicical",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.5209090851403014,
+        "ndcg_at_5": 0.4130547397016814,
+        "ndcg_at_10": 0.5254436340389187
+      },
+      "total_relevant": 6,
+      "total_documents": 6
+    },
+    {
+      "query": "multa 477 atraso guias",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.849607409925425,
+        "ndcg_at_10": 0.8310079275866007
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "multa contratual deverá incidir apenas uma vez",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.13291299131469791,
+        "ndcg_at_5": 0.20323160666093484,
+        "ndcg_at_10": 0.2661096177996078
+      },
+      "total_relevant": 12,
+      "total_documents": 19
+    },
+    {
+      "query": "necessidade de intimação pessoal da parte e de ciência ao advogado",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.6917831836856677,
+        "ndcg_at_10": 0.7545600050406419
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "negativa de reembolso de voo. valor retido. TJ GO",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.8238318697399423
+      },
+      "total_relevant": 11,
+      "total_documents": 15
+    },
+    {
+      "query": "nulidade de ato administrativo, por falta de motivação",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.9633180389503199
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "o docente CLT afastado por doença no período de atribuição de aulas,  pode participar do processo?",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.2640681225725909,
+        "ndcg_at_10": 0.448643819352159
+      },
+      "total_relevant": 2,
+      "total_documents": 17
+    },
+    {
+      "query": "oitiva de testemunha não arrolada pela acusação",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.43354350434265104,
+        "ndcg_at_5": 0.6191463544777535,
+        "ndcg_at_10": 0.6687811879426062
+      },
+      "total_relevant": 13,
+      "total_documents": 17
+    },
+    {
+      "query": "ônus da prova da mulher",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7039180890341347,
+        "ndcg_at_5": 0.5743428466665951,
+        "ndcg_at_10": 0.718169977020345
+      },
+      "total_relevant": 7,
+      "total_documents": 17
+    },
+    {
+      "query": "pedido adicional de periculosidade frentista trt2",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7346393630113782,
+        "ndcg_at_5": 0.735182641392979,
+        "ndcg_at_10": 0.822505483792883
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "pedido de revogação de mandato de advogado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.617319681505689,
+        "ndcg_at_5": 0.5773584151532217,
+        "ndcg_at_10": 0.6582724377269082
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "possibilidade de complemento pelo tribunal, sentença citra petita",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.5508310938724935,
+        "ndcg_at_10": 0.5551846731739543
+      },
+      "total_relevant": 16,
+      "total_documents": 19
+    },
+    {
+      "query": "preliminar de nulidade da sentença por ausência de designação de audiência de conciliação",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.566456495657349,
+        "ndcg_at_5": 0.6438542785953449,
+        "ndcg_at_10": 0.737797806394673
+      },
+      "total_relevant": 13,
+      "total_documents": 18
+    },
+    {
+      "query": "preliminar de suspensão do processo",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.6480409554829326,
+        "ndcg_at_5": 0.5339589574459106,
+        "ndcg_at_10": 0.4465875040342616
+      },
+      "total_relevant": 12,
+      "total_documents": 18
+    },
+    {
+      "query": "PROCEDIMENTO VOLUNTARIO",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.41340159247155434,
+        "ndcg_at_5": 0.2987763160529316,
+        "ndcg_at_10": 0.19388538544807457
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "quebra de contrato de seguradora",
+      "ndcg_results": {
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.2653606369886217,
+        "ndcg_at_5": 0.4034540722845451,
+        "ndcg_at_10": 0.6274111277192592
+      },
+      "total_relevant": 15,
+      "total_documents": 19
+    },
+    {
+      "query": "refis acarreta a suspensão da execução fiscal",
+      "ndcg_results": {
+        "ndcg_at_1": 0.6666666666666666,
+        "ndcg_at_3": 0.5950234416789836,
+        "ndcg_at_5": 0.5724961472303142,
+        "ndcg_at_10": 0.6723874862509323
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "reincidencia. auto de infração",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.4703652827859579,
+        "ndcg_at_10": 0.5116508161747901
+      },
+      "total_relevant": 17,
+      "total_documents": 18
+    },
+    {
+      "query": "relacionamento conturbado violência doméstica",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.915209948681596,
+        "ndcg_at_10": 0.94497705842548
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "repositor de supermercado",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8519590445170673,
+        "ndcg_at_5": 0.8930068676327362,
+        "ndcg_at_10": 0.8938868170135427
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "resistência ao direito de regresso",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.7346393630113782,
+        "ndcg_at_5": 0.7426142775581612,
+        "ndcg_at_10": 0.7320044432451145
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "responsabilidade pelo aditamento do aluno. ação de obrigação de fazer.",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    },
+    {
+      "query": "revogação",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.23463936301137822,
+        "ndcg_at_5": 0.30078518014914984,
+        "ndcg_at_10": 0.4042383682811874
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "seguro-desemprego vínculo reconhecido súmula 389",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "seguro saúde título executivo extrajudicial",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.830419897363192,
+        "ndcg_at_10": 0.8507549823616222
+      },
+      "total_relevant": 16,
+      "total_documents": 18
+    },
+    {
+      "query": "TJ CE CONFLITO DE JURISDIÇÃO JUIZADO DE VIOLÊNCIA DOMÉSTICA E FAMILIAR CONTRA A MULHER DE JUAZEIRO DO NORTE",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.8826803184943108,
+        "ndcg_at_5": 0.915209948681596,
+        "ndcg_at_10": 0.8365703301008977
+      },
+      "total_relevant": 16,
+      "total_documents": 16
+    },
+    {
+      "query": "trabalho doméstico + aviso prévio + rescisão indireta",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 1.0
+      },
+      "total_relevant": 18,
+      "total_documents": 18
+    },
+    {
+      "query": "tratorista auxilio doença necessidade de afastamento",
+      "ndcg_results": {
+        "ndcg_at_1": 0.5,
+        "ndcg_at_3": 0.7653606369886217,
+        "ndcg_at_5": 0.6843515475204855,
+        "ndcg_at_10": 0.7584837914317291
+      },
+      "total_relevant": 19,
+      "total_documents": 19
+    },
+    {
+      "query": "valor da causa inferior a um salario minimo",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.46927872602275644,
+        "ndcg_at_5": 0.3391602052736161,
+        "ndcg_at_10": 0.48553456068968903
+      },
+      "total_relevant": 6,
+      "total_documents": 16
+    },
+    {
+      "query": "vício constatado fiat fastback",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 0.9269658250786468,
+        "ndcg_at_10": 0.9852207038237556
+      },
+      "total_relevant": 7,
+      "total_documents": 7
+    },
+    {
+      "query": "vida util do produto",
+      "ndcg_results": {
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0,
+        "ndcg_at_10": 0.933745776545611
+      },
+      "total_relevant": 17,
+      "total_documents": 17
+    }
+  ]
+}
