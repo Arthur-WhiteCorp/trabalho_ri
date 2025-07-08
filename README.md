@@ -17,6 +17,10 @@ Este trabalho consiste no desenvolvimento de um buscador Jurídico que nomeamos 
 
 ## Como Executar
 
+Baixe a base de documentos [nesse link](https://drive.google.com/file/d/1ekgXfYu23pBG-Wu4X1a8GsiLlN0TLIzI/view?usp=sharing).
+
+Coloque o arquivo `baseDocumentos.parquet` na pasta `colecao`.
+
 Rode o script:
 
 ```
