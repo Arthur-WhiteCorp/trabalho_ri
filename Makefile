@@ -38,10 +38,25 @@ stop:
 	docker stop flask-app || true
 	docker rm flask-app || true
 
-# ===== NOVOS COMANDOS COM DOCKER COMPOSE =====
+# ===== COMANDOS COM DOCKER COMPOSE - SEQUÊNCIA CORRETA =====
 
-# Inicia todos os serviços (Elasticsearch + Indexador + Flask)
+# Inicia todo o processo: Elasticsearch → Indexador → Flask (SEQUENCIAL)
+up-sequencial:
+	@echo "🚀 Iniciando processo sequencial..."
+	@echo "1️⃣ Iniciando Elasticsearch..."
+	@docker compose up -d elasticsearch
+	@echo "⏳ Aguardando Elasticsearch estar pronto..."
+	@sleep 30
+	@echo "2️⃣ Executando indexação..."
+	@docker compose up indexador
+	@echo "3️⃣ Iniciando Flask..."
+	@docker compose up -d flask-app
+	@echo "✅ Processo completo! Flask disponível em http://localhost:5000"
+
+# Inicia todos os serviços (dependências automáticas do Docker Compose)
 up:
+	@echo "🚀 Iniciando todos os serviços com dependências automáticas..."
+	@echo "📋 Sequência: Elasticsearch → Indexador → Flask"
 	docker compose up -d
 
 # Para todos os serviços
@@ -52,17 +67,25 @@ down:
 elasticsearch:
 	docker compose up -d elasticsearch
 
-# Roda apenas o indexador (depende do Elasticsearch)
+# Roda apenas o indexador (depende do Elasticsearch estar saudável)
 index:
 	docker compose up indexador
 
-# Roda apenas o Flask (depende do Elasticsearch)
+# Roda apenas o Flask (depende do indexador ter terminado)
 flask:
 	docker compose up flask-app
 
 # Roda tudo em modo interativo (para ver logs)
 up-interactive:
+	@echo "🚀 Iniciando em modo interativo para ver logs..."
 	docker compose up
+
+# Reinicia todo o processo (limpa e inicia novamente)
+restart:
+	@echo "🔄 Reiniciando todo o processo..."
+	@make down
+	@sleep 5
+	@make up
 
 # Limpa tudo (containers, volumes, redes)
 clean:
@@ -85,11 +108,24 @@ logs-indexador:
 logs-flask:
 	docker compose logs flask-app
 
-# Roda o indexador e depois o Flask (sequencial)
-index-and-flask: elasticsearch
-	@echo "⏳ Aguardando Elasticsearch inicializar..."
-	@sleep 30
-	@echo "📚 Executando indexador..."
-	@docker compose up indexador
-	@echo "🌐 Iniciando aplicação Flask..."
-	@docker compose up -d flask-app 
+# Ver logs de todos os serviços
+logs:
+	docker compose logs
+
+# Seguir logs em tempo real
+logs-follow:
+	docker compose logs -f
+
+# Comando para debugging - mostra informações dos volumes
+debug-volumes:
+	@echo "📊 Informações dos volumes:"
+	@docker volume ls | grep trabalho_ri || echo "Nenhum volume encontrado"
+	@echo ""
+	@echo "📁 Conteúdo do volume compartilhado:"
+	@docker run --rm -v trabalho_ri_shared_signals:/shared alpine ls -la /shared || echo "Volume não acessível"
+
+# Remove apenas o arquivo de sinal para reindexar
+reset-signal:
+	@echo "🧹 Removendo arquivo de sinal para permitir reindexação..."
+	@docker run --rm -v trabalho_ri_shared_signals:/shared alpine rm -f /shared/indexacao_completa.flag || echo "Arquivo não encontrado"
+	@echo "✅ Sinal removido. Próxima execução fará reindexação completa." 

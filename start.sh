@@ -3,14 +3,17 @@
 # Script de inicialização do projeto de indexação
 # Uso: ./start.sh [comando]
 # Comandos disponíveis:
-#   up          - Inicia todos os serviços (Elasticsearch + Indexador + Flask)
+#   up          - Inicia todos os serviços com dependências automáticas (Elasticsearch → Indexador → Flask)
+#   up-seq      - Inicia processo sequencial manual (com pausas)
 #   index       - Roda apenas o indexador
 #   flask       - Roda apenas o Flask
 #   elastic     - Roda apenas o Elasticsearch
 #   down        - Para todos os serviços
+#   restart     - Reinicia todo o processo
 #   clean       - Limpa tudo (containers, volumes, redes)
 #   status      - Mostra status dos serviços
 #   logs        - Mostra logs de todos os serviços
+#   reset       - Remove arquivo de sinal para reindexar
 
 set -e
 
@@ -62,37 +65,65 @@ check_colecao() {
     fi
 }
 
-# Função para iniciar todos os serviços
+# Função para iniciar todos os serviços com dependências automáticas
 start_all() {
-    print_info "Iniciando todos os serviços..."
+    print_info "Iniciando todos os serviços com dependências automáticas..."
+    print_info "📋 Sequência: Elasticsearch → Indexador → Flask"
     docker compose up -d
-    print_success "Serviços iniciados! Aguarde alguns segundos para o Elasticsearch inicializar."
-    print_info "Para ver os logs: ./start.sh logs"
-    print_info "Para ver o status: ./start.sh status"
+    print_success "Serviços iniciados!"
+    print_info "⏳ Aguarde alguns minutos para a indexação terminar e o Flask iniciar"
+    print_info "🌐 O Flask estará disponível em http://localhost:5000 após a indexação"
+    print_info "📊 Para ver os logs: ./start.sh logs"
+    print_info "📈 Para ver o status: ./start.sh status"
+}
+
+# Função para iniciar processo sequencial manual
+start_sequential() {
+    print_info "Iniciando processo sequencial manual..."
+    print_info "1️⃣ Iniciando Elasticsearch..."
+    docker compose up -d elasticsearch
+    
+    print_info "⏳ Aguardando Elasticsearch inicializar (30 segundos)..."
+    sleep 30
+    
+    print_info "2️⃣ Executando indexação..."
+    docker compose up indexador
+    
+    print_info "3️⃣ Iniciando Flask..."
+    docker compose up -d flask-app
+    
+    print_success "Processo sequencial completo!"
+    print_info "🌐 Flask disponível em http://localhost:5000"
 }
 
 # Função para rodar apenas o indexador
 run_indexer() {
-    print_info "Iniciando Elasticsearch..."
-    docker compose up -d elasticsearch
-    
-    print_info "Aguardando Elasticsearch inicializar..."
-    sleep 10
-    
-    print_info "Executando indexador..."
+    print_info "Iniciando apenas o indexador..."
+    print_warning "Certifique-se de que o Elasticsearch esteja rodando"
     docker compose up indexador
 }
 
 # Função para rodar apenas o Flask
 run_flask() {
-    print_info "Iniciando Elasticsearch..."
-    docker compose up -d elasticsearch
-    
-    print_info "Aguardando Elasticsearch inicializar..."
-    sleep 10
-    
-    print_info "Executando Flask..."
+    print_info "Iniciando apenas o Flask..."
+    print_warning "Certifique-se de que a indexação já foi concluída"
     docker compose up flask-app
+}
+
+# Função para rodar apenas o Elasticsearch
+run_elasticsearch() {
+    print_info "Iniciando apenas o Elasticsearch..."
+    docker compose up -d elasticsearch
+    print_success "Elasticsearch iniciado!"
+    print_info "⏳ Aguarde alguns segundos para estar completamente pronto"
+}
+
+# Função para reiniciar todo o processo
+restart_all() {
+    print_info "Reiniciando todo o processo..."
+    docker compose down
+    sleep 5
+    start_all
 }
 
 # Função para mostrar logs
@@ -105,6 +136,14 @@ show_logs() {
 show_status() {
     print_info "Status dos serviços:"
     docker compose ps
+    
+    echo ""
+    print_info "Verificando arquivo de sinal de indexação..."
+    if docker run --rm -v trabalho_ri_shared_signals:/shared alpine test -f /shared/indexacao_completa.flag 2>/dev/null; then
+        print_success "Indexação completa!"
+    else
+        print_warning "Indexação ainda em andamento ou não iniciada"
+    fi
 }
 
 # Função para parar todos os serviços
@@ -128,25 +167,39 @@ clean_all() {
     fi
 }
 
+# Função para resetar o arquivo de sinal
+reset_signal() {
+    print_info "Removendo arquivo de sinal para permitir reindexação..."
+    docker run --rm -v trabalho_ri_shared_signals:/shared alpine rm -f /shared/indexacao_completa.flag 2>/dev/null || print_warning "Arquivo não encontrado"
+    print_success "Sinal removido. Próxima execução fará reindexação completa."
+}
+
 # Função para mostrar ajuda
 show_help() {
     echo "Uso: ./start.sh [comando]"
     echo ""
     echo "Comandos disponíveis:"
-    echo "  up          - Inicia todos os serviços (Elasticsearch + Indexador + Flask)"
+    echo "  up          - Inicia todos os serviços com dependências automáticas (Recomendado)"
+    echo "  up-seq      - Inicia processo sequencial manual (com pausas)"
     echo "  index       - Roda apenas o indexador"
     echo "  flask       - Roda apenas o Flask"
     echo "  elastic     - Roda apenas o Elasticsearch"
     echo "  down        - Para todos os serviços"
+    echo "  restart     - Reinicia todo o processo"
     echo "  clean       - Limpa tudo (containers, volumes, redes)"
     echo "  status      - Mostra status dos serviços"
     echo "  logs        - Mostra logs de todos os serviços"
+    echo "  reset       - Remove arquivo de sinal para reindexar"
     echo "  help        - Mostra esta ajuda"
     echo ""
     echo "Exemplos:"
-    echo "  ./start.sh up      # Inicia tudo"
-    echo "  ./start.sh index   # Roda apenas o indexador"
-    echo "  ./start.sh logs    # Vê os logs"
+    echo "  ./start.sh up        # Inicia tudo (RECOMENDADO)"
+    echo "  ./start.sh up-seq    # Inicia manualmente passo a passo"
+    echo "  ./start.sh logs      # Vê os logs"
+    echo "  ./start.sh status    # Verifica status"
+    echo ""
+    echo "📋 Sequência automática: Elasticsearch → Indexador → Flask"
+    echo "🌐 Flask estará disponível em http://localhost:5000"
 }
 
 # Verificações iniciais
@@ -159,6 +212,9 @@ case "${1:-help}" in
     "up")
         start_all
         ;;
+    "up-seq")
+        start_sequential
+        ;;
     "index")
         run_indexer
         ;;
@@ -166,12 +222,13 @@ case "${1:-help}" in
         run_flask
         ;;
     "elastic")
-        print_info "Iniciando apenas o Elasticsearch..."
-        docker compose up -d elasticsearch
-        print_success "Elasticsearch iniciado!"
+        run_elasticsearch
         ;;
     "down")
         stop_all
+        ;;
+    "restart")
+        restart_all
         ;;
     "clean")
         clean_all
@@ -181,6 +238,9 @@ case "${1:-help}" in
         ;;
     "logs")
         show_logs
+        ;;
+    "reset")
+        reset_signal
         ;;
     "help"|"--help"|"-h")
         show_help

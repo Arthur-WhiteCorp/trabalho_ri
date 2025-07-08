@@ -30,6 +30,15 @@ def main():
     indexer.execute_index(df)
 
     print("✅ Indexação finalizada com sucesso!")
+    
+    # 5. Criar arquivo de sinal para indicar que a indexação está completa
+    signal_file = "/app/indexacao_completa.flag"
+    try:
+        with open(signal_file, "w") as f:
+            f.write("INDEXACAO_COMPLETA")
+        print(f"📋 Arquivo de sinal criado: {signal_file}")
+    except Exception as e:
+        print(f"⚠️  Aviso: Não foi possível criar arquivo de sinal: {str(e)}")
 
 if __name__ == "__main__":
     main()

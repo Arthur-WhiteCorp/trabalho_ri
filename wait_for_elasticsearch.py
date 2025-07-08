@@ -26,7 +26,7 @@ def wait_for_elasticsearch(max_retries=30, retry_interval=2):
     for attempt in range(max_retries):
         try:
             # Tentar conectar com o Elasticsearch
-            es = Elasticsearch(es_url, verify_certs=False, ssl_show_warn=False)
+            es = Elasticsearch([es_url], verify_certs=False, ssl_show_warn=False, timeout=30)
             
             if es.ping():
                 info = es.info()

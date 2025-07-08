@@ -13,14 +13,22 @@ services:
       - elasticsearch_data:/usr/share/elasticsearch/data
     networks:
       - elastic
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
   indexador:
     build: .
     container_name: indexador
     depends_on:
-      - elasticsearch
+      elasticsearch:
+        condition: service_healthy
     volumes:
       - ./colecao:/app/colecao
+      - shared_signals:/app  # Volume compartilhado para arquivos de sinal
     environment:
       - ELASTICSEARCH_URL=http://elasticsearch:9200
     networks:
@@ -31,20 +39,23 @@ services:
     build: .
     container_name: flask-app
     depends_on:
-      - elasticsearch
+      indexador:
+        condition: service_completed_successfully
     ports:
       - "5000:5000"
     volumes:
       - ./colecao:/app/colecao
       - ./analysers:/app/analysers
+      - shared_signals:/app  # Volume compartilhado para arquivos de sinal
     environment:
       - ELASTICSEARCH_URL=http://elasticsearch:9200
     networks:
       - elastic
-    command: python app.py
+    command: python start_flask.py
 
 volumes:
   elasticsearch_data:
+  shared_signals:  # Volume para compartilhar arquivos de sinal entre containers
 
 networks:
   elastic:
