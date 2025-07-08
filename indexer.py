@@ -317,7 +317,7 @@ class Indexer:
         
         # Obter documentos do topo (primeiros 10 resultados)
         top_documents = []
-        for hit in original_results['hits']['hits'][:10]:
+        for hit in original_results['hits']['hits'][:10]: # 10 documentos do topo do rank
             top_documents.append(hit['_source'])
         
         # Extrair termos relevantes (expansão local)
